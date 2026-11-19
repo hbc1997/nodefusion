@@ -254,36 +254,136 @@ def parse_ss(uri: str) -> tuple[str, int] | None:
         return None
 
 
-def parse_clash_yaml(text: str) -> list[tuple[str, int, str]]:
-    """从 clash/mihomo 配置中提取节点（轻量解析，不依赖 PyYAML）。"""
-    out: list[tuple[str, int, str]] = []
+def _yaml_field(block: str, key: str) -> str | None:
+    m = re.search(rf"^\s*{re.escape(key)}:\s*\"?([^\"\n]+?)\"?\s*$", block, re.M)
+    if m:
+        v = m.group(1).strip()
+        return v if v and v not in ("true", "false", "null", "~") else None
+    return None
+
+
+def _yaml_bool(block: str, key: str) -> bool:
+    m = re.search(rf"^\s*{re.escape(key)}:\s*(true|false)", block, re.M | re.I)
+    return bool(m and m.group(1).lower() == "true")
+
+
+def parse_clash_yaml(text: str) -> list[dict]:
+    """从 clash/mihomo 配置中提取节点完整字段（轻量解析，不依赖 PyYAML）。"""
+    out: list[dict] = []
     if "proxies:" not in text:
         return out
     body = text.split("proxies:", 1)[1]
+    # 遇到下一个顶层键就停
+    stop = re.search(r"^[a-zA-Z][a-zA-Z0-9_-]*:", body, re.M)
+    if stop:
+        body = body[:stop.start()]
     for block in re.split(r"\n(?=\s*-\s)", body):
         if not block.strip().startswith("-"):
             continue
-        server = re.search(r"^\s*server:\s*\"?([^\s\"',]+)\"?", block, re.M)
-        if not server:
-            server = re.search(r"server:\s*\"?([^\s\"',]+)\"?", block)
-        port_m = re.search(r"^\s*port:\s*\"?(\d{1,5})\"?", block, re.M)
-        if not port_m:
-            port_m = re.search(r"port:\s*(\d{1,5})", block)
-        if not (server and port_m):
+        server = _yaml_field(block, "server")
+        port_s = _yaml_field(block, "port")
+        typ = _yaml_field(block, "type")
+        if not (server and port_s and typ):
             continue
-        typ = re.search(r"^\s*type:\s*(\S+)", block, re.M)
-        name = re.search(r"^\s*name:\s*\"?([^\"\n]+)\"?", block, re.M)
+        t = typ.lower()
+        if t not in _CLASH_TYPES:
+            continue
         try:
-            port = int(port_m.group(1))
+            port = int(port_s)
         except ValueError:
             continue
         if not (0 < port < 65536):
             continue
-        t = (typ.group(1).strip() if typ else "").lower()
-        if t not in _CLASH_TYPES:
-            continue
-        out.append((server.group(1), port, t, (name.group(1).strip() if name else "")))
+        out.append({
+            "type": t, "server": server, "port": port,
+            "name": _yaml_field(block, "name") or "",
+            "uuid": _yaml_field(block, "uuid"),
+            "password": _yaml_field(block, "password"),
+            "cipher": _yaml_field(block, "cipher"),
+            "sni": _yaml_field(block, "sni") or _yaml_field(block, "servername"),
+            "network": _yaml_field(block, "network"),
+            "ws-path": _yaml_field(block, "path"),
+            "ws-host": _yaml_field(block, "host"),
+            "flow": _yaml_field(block, "flow"),
+            "plugin": _yaml_field(block, "plugin"),
+            "plugin-opts": _yaml_field(block, "mode"),
+            "obfs": _yaml_field(block, "obfs"),
+            "obfs-password": _yaml_field(block, "obfs-password"),
+            "tls": _yaml_bool(block, "tls"),
+            "skip-cert-verify": _yaml_bool(block, "skip-cert-verify"),
+        })
     return out
+
+
+def _safe_b64(s: str) -> str:
+    return base64.b64encode(s.encode()).decode().rstrip("=")
+
+
+def build_uri(n: dict) -> str:
+    """把 clash YAML 节点字段重建为可导入的原始 URI。"""
+    t, host, port = n["type"], n["server"], n["port"]
+    name = urllib.parse.quote(n.get("name") or f"{host}:{port}", safe="")
+    sni = n.get("sni") or ""
+    net = (n.get("network") or "").lower()
+    path = n.get("ws-path") or ""
+    hst = n.get("ws-host") or ""
+
+    if t == "vless" and n.get("uuid"):
+        q = ["encryption=none", "security=tls" if n.get("tls") else "security=none"]
+        if sni:
+            q.append("sni=" + urllib.parse.quote(sni, safe=""))
+        if n.get("flow"):
+            q.append("flow=" + urllib.parse.quote(n["flow"], safe=""))
+        if net:
+            q.append("type=" + net)
+        if path:
+            q.append("path=" + urllib.parse.quote(path, safe=""))
+        if hst:
+            q.append("host=" + urllib.parse.quote(hst, safe=""))
+        if n.get("skip-cert-verify"):
+            q.append("allowInsecure=1")
+        return f"vless://{n['uuid']}@{host}:{port}?{'&'.join(q)}#{name}"
+
+    if t == "vmess" and n.get("uuid"):
+        obj = {
+            "v": "2", "ps": n.get("name") or f"{host}:{port}", "add": host,
+            "port": str(port), "id": n["uuid"], "aid": "0",
+            "scy": "auto", "net": net or "tcp", "type": "none",
+            "host": hst, "path": path,
+            "tls": "tls" if n.get("tls") else "", "sni": sni,
+        }
+        return "vmess://" + base64.b64encode(
+            json.dumps(obj, separators=(",", ":")).encode()).decode()
+
+    if t == "trojan" and n.get("password"):
+        q = []
+        if sni:
+            q.append("sni=" + urllib.parse.quote(sni, safe=""))
+        if net:
+            q.append("type=" + net)
+        if path:
+            q.append("path=" + urllib.parse.quote(path, safe=""))
+        if hst:
+            q.append("host=" + urllib.parse.quote(hst, safe=""))
+        if n.get("skip-cert-verify"):
+            q.append("allowInsecure=1")
+        tail = ("?" + "&".join(q)) if q else ""
+        return f"trojan://{n['password']}@{host}:{port}{tail}#{name}"
+
+    if t == "ss" and n.get("password"):
+        cipher = n.get("cipher") or "aes-256-gcm"
+        userinfo = _safe_b64(f"{cipher}:{n['password']}")
+        q = []
+        if n.get("plugin"):
+            plug = n["plugin"]
+            opts = n.get("plugin-opts")
+            if opts:
+                plug += f";mode={opts}"
+            q.append("plugin=" + urllib.parse.quote(plug, safe=""))
+        tail = ("?" + "&".join(q)) if q else ""
+        return f"ss://{userinfo}@{host}:{port}{tail}#{name}"
+
+    return ""
 
 
 def extract_nodes(text: str) -> list[Node]:
@@ -291,9 +391,16 @@ def extract_nodes(text: str) -> list[Node]:
     nodes: list[Node] = []
 
     if "proxies:" in text:
-        for host, port, typ, name in parse_clash_yaml(text):
-            u = f"yaml://{typ}/{host}:{port}#{name}"
-            nodes.append(Node(uri=u, scheme=typ, host=host, port=port, name=name))
+        for item in parse_clash_yaml(text):
+            host, port, typ = item["server"], item["port"], item["type"]
+            uri = ""
+            try:
+                uri = build_uri(item)
+            except Exception:
+                uri = ""
+            nodes.append(Node(uri=uri or f"yaml://{typ}/{host}:{port}",
+                              scheme=typ, host=host, port=port,
+                              name=item.get("name") or ""))
 
     for line in text.splitlines():
         s = line.strip()
