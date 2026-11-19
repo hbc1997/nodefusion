@@ -61,6 +61,15 @@ SOURCES: list[dict] = [
 ]
 
 SCHEMES = ("vmess", "vless", "trojan", "ss", "ssr", "hysteria2", "hy2", "tuic")
+
+# Clash/mihomo 支持的节点类型（用于 YAML 解析与输出过滤）
+_CLASH_TYPES = {
+    "vmess", "vless", "trojan", "ss", "ssr", "hysteria", "hysteria2", "hy2",
+    "tuic", "snell", "socks5", "http", "anytls", "wireguard", "mieru",
+}
+
+# 输出 clash.yaml 时只保留这些（mihomo 严格支持，参数完整）
+_YAML_SAFE = {"vmess", "vless", "trojan", "ss", "hysteria2", "tuic"}
 UA = "clash-verge/v2.0"
 
 
@@ -270,8 +279,10 @@ def parse_clash_yaml(text: str) -> list[tuple[str, int, str]]:
             continue
         if not (0 < port < 65536):
             continue
-        out.append((server.group(1), port, (typ.group(1) if typ else "clash"),
-                    (name.group(1).strip() if name else "")))
+        t = (typ.group(1).strip() if typ else "").lower()
+        if t not in _CLASH_TYPES:
+            continue
+        out.append((server.group(1), port, t, (name.group(1).strip() if name else "")))
     return out
 
 
@@ -476,6 +487,8 @@ def to_clash_yaml(nodes: list[Node], title: str = "nodefusion") -> str:
     skip_types = {"clash", "hysteria2", "hy2", "tuic", "ssr", "ss"}
     count = 0
     for n in nodes:
+        if n.scheme not in _YAML_SAFE:
+            continue
         base = clean_name(n.name, f"{n.host}:{n.port}")
         tag = base
         if tag in used:
