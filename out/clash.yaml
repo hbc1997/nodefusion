@@ -1,582 +1,1521 @@
-# nodefusion - auto generated 2026-11-19 04:55:38
-# alive nodes: 250
+# nodefusion  generated 2026-11-19 05:04:35 UTC
+# alive: 146   speed-tested: 0
 mixed-port: 7890
 allow-lan: false
 mode: rule
 log-level: warning
 external-controller: 127.0.0.1:9090
+unified-delay: true
+tcp-concurrent: true
 
 dns:
   enable: true
   ipv6: false
+  enhanced-mode: normal
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
 
 proxies:
-  # 14ms  hysteria2
-  - {name: "192.255.152.147:443", server: "192.255.152.147", port: 443, type: "hysteria2", udp: true, skip-cert-verify: true}
-  # 16ms  vless
-  - {name: "162.35.101.177:443", server: "162.35.101.177", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 17ms  vless
-  - {name: "104.17.145.145:2083", server: "104.17.145.145", port: 2083, type: "vless", udp: true, skip-cert-verify: true}
-  # 18ms  vless
-  - {name: "172.64.79.163:2083", server: "172.64.79.163", port: 2083, type: "vless", udp: true, skip-cert-verify: true}
-  # 30ms  vless
-  - {name: "🏳[www.v2nodes.com] vless- #19", server: "199.232.78.159", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 30ms  vless
-  - {name: "🇺🇸[www.v2nodes.com] vless-US-1... #6", server: "199.232.78.160", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 30ms  vless
-  - {name: "🇸🇬[www.v2nodes.com] vless-SG-7... #2", server: "104.18.109.147", port: 2052, type: "vless", udp: true, skip-cert-verify: true}
-  # 30ms  vless
-  - {name: "🏳[www.v2nodes.com] vless- #15", server: "172.67.131.125", port: 2083, type: "vless", udp: true, skip-cert-verify: true}
-  # 30ms  vless
-  - {name: "🇸🇬[www.v2nodes.com] vless-SG-7...", server: "141.193.213.10", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 31ms  vless
-  - {name: "🇯🇵[www.v2nodes.com] vless-JP-1...", server: "104.16.10.9", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 31ms  vless
-  - {name: "🇮🇳[www.v2nodes.com] vless-IN-1...", server: "188.114.99.137", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 32ms  vless
-  - {name: "🇬🇧[www.v2nodes.com] vless-GB-1...", server: "88.216.67.54", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 32ms  vless
-  - {name: "🇫🇷[www.v2nodes.com] vless-FR-1... #1", server: "199.232.78.120", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 32ms  vless
-  - {name: "🇫🇮[www.v2nodes.com] vless-FI-1...", server: "198.202.24.142", port: 2083, type: "vless", udp: true, skip-cert-verify: true}
-  # 32ms  vless
-  - {name: "🇨🇦[www.v2nodes.com] vless-CA", server: "27.50.48.6", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 32ms  vless
-  - {name: "🏳[www.v2nodes.com] vless- #14", server: "104.26.13.31", port: 8080, type: "vless", udp: true, skip-cert-verify: true}
-  # 33ms  vless
-  - {name: "🇸🇬[www.v2nodes.com] vless-SG-7... #1", server: "188.114.98.0", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 34ms  trojan
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)", server: "199.232.249.131", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 35ms  trojan
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-1", server: "104.16.148.5", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 36ms  trojan
-  - {name: "🇺🇸 美国5|@ripaojiedian", server: "151.101.110.219", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 36ms  trojan
-  - {name: "🇺🇸 美国|@ripaojiedian", server: "167.82.76.27", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 36ms  vmess
-  - {name: "192.74.236.148:30004", server: "192.74.236.148", port: 30004, type: "vmess", udp: true, skip-cert-verify: true}
-  # 49ms  ss
-  - {name: "🇲🇽[www.v2nodes.com] ss-MX-1564...", server: "64.177.90.30", port: 8388, type: "ss", udp: true, skip-cert-verify: true}
-  # 56ms  trojan
-  - {name: "216.152.147.152:443", server: "216.152.147.152", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 57ms  trojan
-  - {name: "216.152.147.79:443", server: "216.152.147.79", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 58ms  trojan
-  - {name: "216.152.147.93:443", server: "216.152.147.93", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 58ms  trojan
-  - {name: "216.152.147.74:443", server: "216.152.147.74", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 67ms  ss
-  - {name: "🇨🇦[www.v2nodes.com] ss-CA-1559... #1", server: "51.79.85.185", port: 8118, type: "ss", udp: true, skip-cert-verify: true}
-  # 67ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #1", server: "51.222.155.113", port: 5601, type: "ss", udp: true, skip-cert-verify: true}
-  # 68ms  ss
-  - {name: "🇨🇦[www.v2nodes.com] ss-CA-1545...", server: "51.79.64.198", port: 8119, type: "ss", udp: true, skip-cert-verify: true}
-  # 68ms  ss
-  - {name: "🇨🇦[www.v2nodes.com] ss-CA-1557...", server: "51.222.136.236", port: 8882, type: "ss", udp: true, skip-cert-verify: true}
-  # 72ms  ss
-  - {name: "🇨🇦[www.v2nodes.com] ss-CA-1546...", server: "51.222.155.32", port: 5003, type: "ss", udp: true, skip-cert-verify: true}
-  # 72ms  ss
-  - {name: "🇨🇦[www.v2nodes.com] ss-CA-1538...", server: "51.222.12.127", port: 445, type: "ss", udp: true, skip-cert-verify: true}
-  # 72ms  ss
-  - {name: "🇨🇦[www.v2nodes.com] ss-CA-1559...", server: "51.222.141.125", port: 445, type: "ss", udp: true, skip-cert-verify: true}
-  # 73ms  ss
-  - {name: "🏳[www.v2nodes.com] ss-", server: "15.235.121.109", port: 8080, type: "ss", udp: true, skip-cert-verify: true}
-  # 79ms  trojan
-  - {name: "🇸🇬 SG新加坡(mibei77.com 米贝节点分享)", server: "sclass-01.catcat321.com", port: 20103, type: "trojan", udp: true, skip-cert-verify: true}
-  # 87ms  ss
-  - {name: "🇨🇦[www.v2nodes.com] ss-CA-1558...", server: "51.222.200.165", port: 5000, type: "ss", udp: true, skip-cert-verify: true}
-  # 104ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #12", server: "149.22.87.241", port: 443, type: "ss", udp: true, skip-cert-verify: true}
-  # 105ms  ss
-  - {name: "🇯🇵[www.v2nodes.com] ss-JP-5141...", server: "149.22.87.204", port: 443, type: "ss", udp: true, skip-cert-verify: true}
-  # 105ms  ss
-  - {name: "🇯🇵[www.v2nodes.com] ss-JP-1291...", server: "149.22.87.240", port: 443, type: "ss", udp: true, skip-cert-verify: true}
-  # 109ms  vless
-  - {name: "🇲🇾[www.v2nodes.com] vless-MY-1...", server: "382218.xyz", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 117ms  ss
-  - {name: "🇯🇵[www.v2nodes.com] ss-JP-1544...", server: "84.247.155.196", port: 80, type: "ss", udp: true, skip-cert-verify: true}
-  # 117ms  vless
-  - {name: "cf.008500.xyz:443", server: "cf.008500.xyz", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 128ms  trojan
-  - {name: "158.247.253.243:443", server: "158.247.253.243", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 130ms  ss
-  - {name: "🇬🇧[www.v2nodes.com] ss-GB-1602...", server: "185.176.206.9", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 131ms  ss
-  - {name: "🇬🇧[www.v2nodes.com] ss-GB-1615... #1", server: "38.114.120.221", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 131ms  ss
-  - {name: "🇬🇧[www.v2nodes.com] ss-GB-1247...", server: "94.156.250.148", port: 7001, type: "ss", udp: true, skip-cert-verify: true}
-  # 134ms  ss
-  - {name: "🇬🇧[www.v2nodes.com] ss-GB-1615...", server: "142.202.51.22", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 134ms  vless
-  - {name: "57.129.132.223:80", server: "57.129.132.223", port: 80, type: "vless", udp: true, skip-cert-verify: true}
-  # 134ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #9", server: "198.244.202.215", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 135ms  ss
-  - {name: "🇬🇧[www.v2nodes.com] ss-GB-1621...", server: "54.37.240.40", port: 8080, type: "ss", udp: true, skip-cert-verify: true}
-  # 136ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #8", server: "198.244.201.129", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 137ms  ss
-  - {name: "🇬🇧[www.v2nodes.com] ss-GB-1451...", server: "158.173.24.73", port: 443, type: "ss", udp: true, skip-cert-verify: true}
-  # 137ms  trojan
-  - {name: "45.63.30.142:443", server: "45.63.30.142", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 138ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #10", server: "141.98.101.178", port: 443, type: "ss", udp: true, skip-cert-verify: true}
-  # 138ms  vless
-  - {name: "138.124.70.41:14430", server: "138.124.70.41", port: 14430, type: "vless", udp: true, skip-cert-verify: true}
-  # 138ms  vless
-  - {name: "🇹🇼[www.v2nodes.com] vless-TW-1...", server: "60.248.219.53", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 140ms  trojan
-  - {name: "🇯🇵 日本2|@ripaojiedian", server: "v2jp.k1.ssnss.live", port: 44184, type: "trojan", udp: true, skip-cert-verify: true}
-  # 140ms  trojan
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-2", server: "sclass-b1.catcat321.com", port: 20051, type: "trojan", udp: true, skip-cert-verify: true}
-  # 141ms  ss
-  - {name: "🇫🇷[www.v2nodes.com] ss-FR-1615... #2", server: "167.17.64.22", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 141ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #7", server: "172.99.189.142", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 142ms  ss
-  - {name: "🇳🇱[www.v2nodes.com] ss-NL-1614... #1", server: "151.241.19.29", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 142ms  ss
-  - {name: "🇺🇸[www.v2nodes.com] ss-US-1620...", server: "23.230.52.119", port: 42878, type: "ss", udp: true, skip-cert-verify: true}
-  # 142ms  trojan
-  - {name: "66.163.127.215:443", server: "66.163.127.215", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 143ms  ss
-  - {name: "🇳🇱[www.v2nodes.com] ss-NL-1614...", server: "151.241.19.36", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 143ms  trojan
-  - {name: "193.108.119.96:443", server: "193.108.119.96", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 144ms  trojan
-  - {name: "sclass-b1.catcat321.com:20027", server: "sclass-b1.catcat321.com", port: 20027, type: "trojan", udp: true, skip-cert-verify: true}
-  # 144ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #4", server: "193.108.119.3", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 144ms  ss
-  - {name: "🇩🇪[www.v2nodes.com] ss-DE-1615...", server: "23.157.88.43", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 144ms  trojan
-  - {name: "193.108.119.78:443", server: "193.108.119.78", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 144ms  trojan
-  - {name: "193.108.119.15:443", server: "193.108.119.15", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 145ms  ss
-  - {name: "🇫🇷[www.v2nodes.com] ss-FR-1615...", server: "167.17.64.27", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 145ms  ss
-  - {name: "🇫🇷[www.v2nodes.com] ss-FR-1616...", server: "23.162.152.22", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 145ms  vless
-  - {name: "🏳[www.v2nodes.com] vless- #2", server: "5.83.129.236", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 146ms  ss
-  - {name: "🇳🇱[www.v2nodes.com] ss-NL-1618...", server: "156.67.120.205", port: 51628, type: "ss", udp: true, skip-cert-verify: true}
-  # 146ms  vless
-  - {name: "🇳🇱[www.v2nodes.com] vless-NL-1... #6", server: "194.60.228.97", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 146ms  hysteria2
-  - {name: "130.49.161.70:443", server: "130.49.161.70", port: 443, type: "hysteria2", udp: true, skip-cert-verify: true}
-  # 146ms  ss
-  - {name: "🇫🇷[www.v2nodes.com] ss-FR-1615... #1", server: "167.17.64.175", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 146ms  ss
-  - {name: "🇩🇪[www.v2nodes.com] ss-DE-1623...", server: "130.61.145.251", port: 59924, type: "ss", udp: true, skip-cert-verify: true}
-  # 146ms  trojan
-  - {name: "66.163.127.225:443", server: "66.163.127.225", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 147ms  ss
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-3", server: "47.254.143.251", port: 443, type: "ss", udp: true, skip-cert-verify: true}
-  # 148ms  hysteria2
-  - {name: "英国_111906013", server: "31.76.106.92", port: 8443, type: "hysteria2", udp: true, skip-cert-verify: true}
-  # 148ms  ss
-  - {name: "🇩🇪 DE德国(mibei77.com 米贝节点分享)", server: "47.254.169.3", port: 443, type: "ss", udp: true, skip-cert-verify: true}
-  # 149ms  hysteria2
-  - {name: "防失效github+SubCrawler俄罗斯联邦_111906264", server: "95.140.147.245", port: 443, type: "hysteria2", udp: true, skip-cert-verify: true}
-  # 149ms  hysteria2
-  - {name: "179.61.138.145:443", server: "179.61.138.145", port: 443, type: "hysteria2", udp: true, skip-cert-verify: true}
-  # 149ms  ss
-  - {name: "🇩🇪[www.v2nodes.com] ss-DE-1615... #1", server: "193.108.119.2", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 150ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #6", server: "38.109.228.110", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 151ms  ss
-  - {name: "🇩🇪 德国 | DEU #2", server: "47.85.162.44", port: 443, type: "ss", udp: true, skip-cert-verify: true}
-  # 152ms  ss
-  - {name: "🇳🇴[www.v2nodes.com] ss-NO-1220...", server: "185.213.23.63", port: 990, type: "ss", udp: true, skip-cert-verify: true}
-  # 153ms  ss
-  - {name: "🇫🇷 法国 | FRA #1", server: "107.161.160.28", port: 8388, type: "ss", udp: true, skip-cert-verify: true}
-  # 154ms  hysteria2
-  - {name: "南非_111906020", server: "192.142.23.46", port: 443, type: "hysteria2", udp: true, skip-cert-verify: true}
-  # 155ms  ss
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-4", server: "202.50.253.36", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 155ms  ss
-  - {name: "🇮🇹 意大利2|@ripaojiedian", server: "202.50.253.27", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 155ms  trojan
-  - {name: "208.69.78.33:443", server: "208.69.78.33", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 155ms  ss
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-5", server: "202.50.253.72", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 155ms  ss
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-6", server: "202.50.253.18", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 155ms  ss
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-7", server: "202.50.253.45", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 156ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #2", server: "79.127.184.104", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 156ms  ss
-  - {name: "🇪🇸[www.v2nodes.com] ss-ES-1615...", server: "66.163.118.103", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 156ms  trojan
-  - {name: "66.163.118.244:443", server: "66.163.118.244", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 156ms  ss
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-8", server: "202.50.253.90", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 156ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #5", server: "167.17.71.167", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 157ms  trojan
-  - {name: "66.163.118.203:443", server: "66.163.118.203", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 157ms  trojan
-  - {name: "66.163.118.40:443", server: "66.163.118.40", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 157ms  ss
-  - {name: "🇮🇹 意大利(mibei77.com 米贝节点分享)", server: "202.50.253.81", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 158ms  ss
-  - {name: "🇫🇮[www.v2nodes.com] ss-FI-1621...", server: "213.176.92.148", port: 40647, type: "ss", udp: true, skip-cert-verify: true}
-  # 158ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #3", server: "57.129.83.85", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 158ms  ss
-  - {name: "意大利|@ripaojiedian", server: "202.50.253.63", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 158ms  vless
-  - {name: "2.27.14.122:8443", server: "2.27.14.122", port: 8443, type: "vless", udp: true, skip-cert-verify: true}
-  # 158ms  vless
-  - {name: "88.216.60.73:443", server: "88.216.60.73", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 158ms  vless
-  - {name: "2.27.14.122:9443", server: "2.27.14.122", port: 9443, type: "vless", udp: true, skip-cert-verify: true}
-  # 158ms  vless
-  - {name: "191.217.206.147:8443", server: "191.217.206.147", port: 8443, type: "vless", udp: true, skip-cert-verify: true}
-  # 158ms  ss
-  - {name: "🇦🇹[www.v2nodes.com] ss-AT-1595...", server: "82.110.60.9", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 158ms  vless
-  - {name: "191.217.206.147:7443", server: "191.217.206.147", port: 7443, type: "vless", udp: true, skip-cert-verify: true}
-  # 158ms  vless
-  - {name: "191.217.206.147:6443", server: "191.217.206.147", port: 6443, type: "vless", udp: true, skip-cert-verify: true}
-  # 158ms  ss
-  - {name: "🇮🇹[www.v2nodes.com] ss-IT-1597...", server: "185.164.175.81", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 159ms  ss
-  - {name: "🇨🇭[www.v2nodes.com] ss-CH-1616...", server: "23.166.88.127", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 159ms  ss
-  - {name: "🇦🇹[www.v2nodes.com] ss-AT-1614...", server: "152.53.1.57", port: 8388, type: "ss", udp: true, skip-cert-verify: true}
-  # 160ms  vless
-  - {name: "assets.opensignal.com:80", server: "assets.opensignal.com", port: 80, type: "vless", udp: true, skip-cert-verify: true}
-  # 160ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #13", server: "194.87.233.93", port: 46190, type: "ss", udp: true, skip-cert-verify: true}
-  # 160ms  ss
-  - {name: "🇭🇰[www.v2nodes.com] ss-HK-1621...", server: "209.248.57.105", port: 8388, type: "ss", udp: true, skip-cert-verify: true}
-  # 160ms  vless
-  - {name: "152.69.226.63:25555", server: "152.69.226.63", port: 25555, type: "vless", udp: true, skip-cert-verify: true}
-  # 161ms  ss
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-9", server: "202.50.253.99", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 161ms  vless
-  - {name: "191.217.206.147:443", server: "191.217.206.147", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 162ms  hysteria2
-  - {name: "瑞典_111906166", server: "95.143.196.97", port: 443, type: "hysteria2", udp: true, skip-cert-verify: true}
-  # 162ms  ss
-  - {name: "🇮🇹[www.v2nodes.com] ss-IT-1554...", server: "57.131.4.13", port: 8080, type: "ss", udp: true, skip-cert-verify: true}
-  # 162ms  vless
-  - {name: "5.178.109.174:14430", server: "5.178.109.174", port: 14430, type: "vless", udp: true, skip-cert-verify: true}
-  # 162ms  vless
-  - {name: "191.217.206.147:9443", server: "191.217.206.147", port: 9443, type: "vless", udp: true, skip-cert-verify: true}
-  # 163ms  vless
-  - {name: "80.47.10.106:443", server: "80.47.10.106", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 164ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #14", server: "77.221.132.206", port: 24759, type: "ss", udp: true, skip-cert-verify: true}
-  # 164ms  trojan
-  - {name: "208.69.78.158:443", server: "208.69.78.158", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 164ms  ss
-  - {name: "🇮🇹 意大利 | ITA #8", server: "57.131.27.21", port: 8388, type: "ss", udp: true, skip-cert-verify: true}
-  # 165ms  ss
-  - {name: "🇨🇭[www.v2nodes.com] ss-CH-1615...", server: "186.190.215.251", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 165ms  ss
-  - {name: "🇪🇸[www.v2nodes.com] ss-ES-1615... #1", server: "79.127.139.242", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 166ms  ss
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-10", server: "202.50.253.54", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 167ms  trojan
-  - {name: "216.238.104.154:443", server: "216.238.104.154", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 167ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #16", server: "51.79.228.131", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 167ms  ss
-  - {name: "🇸🇬[www.v2nodes.com] ss-SG-1615...", server: "15.235.164.133", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 167ms  vless
-  - {name: "178.172.227.124:10443", server: "178.172.227.124", port: 10443, type: "vless", udp: true, skip-cert-verify: true}
-  # 168ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #17", server: "15.235.182.183", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 168ms  ss
-  - {name: "🇸🇪[www.v2nodes.com] ss-SE-1615...", server: "138.199.55.243", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 168ms  ss
-  - {name: "🇸🇬[www.v2nodes.com] ss-SG-1615... #2", server: "149.88.107.47", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 168ms  ss
-  - {name: "🇸🇬[www.v2nodes.com] ss-SG-1615... #1", server: "149.88.107.74", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 168ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #18", server: "149.88.106.74", port: 19999, type: "ss", udp: true, skip-cert-verify: true}
-  # 168ms  vless
-  - {name: "🇸🇬[www.v2nodes.com] vless-SG-1... #3", server: "139.162.27.96", port: 2096, type: "vless", udp: true, skip-cert-verify: true}
-  # 168ms  vless
-  - {name: "🇸🇪[www.v2nodes.com] vless-SE-1... #2", server: "138.124.86.230", port: 48115, type: "vless", udp: true, skip-cert-verify: true}
-  # 170ms  vless
-  - {name: "45.86.60.174:16443", server: "45.86.60.174", port: 16443, type: "vless", udp: true, skip-cert-verify: true}
-  # 172ms  ss
-  - {name: "🏳[www.v2nodes.com] ss- #15", server: "54.36.174.140", port: 443, type: "ss", udp: true, skip-cert-verify: true}
-  # 173ms  vless
-  - {name: "🇸🇬[www.v2nodes.com] vless-SG-1... #2", server: "207.148.124.12", port: 8443, type: "vless", udp: true, skip-cert-verify: true}
-  # 173ms  vless
-  - {name: "178.172.227.228:14430", server: "178.172.227.228", port: 14430, type: "vless", udp: true, skip-cert-verify: true}
-  # 173ms  trojan
-  - {name: "47.250.84.25:443", server: "47.250.84.25", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 173ms  hysteria2
-  - {name: "31.76.80.69:443", server: "31.76.80.69", port: 443, type: "hysteria2", udp: true, skip-cert-verify: true}
-  # 176ms  ss
-  - {name: "48.103.218.241:18443", server: "48.103.218.241", port: 18443, type: "ss", udp: true, skip-cert-verify: true}
-  # 177ms  vless
-  - {name: "45.144.234.157:14430", server: "45.144.234.157", port: 14430, type: "vless", udp: true, skip-cert-verify: true}
-  # 177ms  ss
-  - {name: "🇦🇱[www.v2nodes.com] ss-AL-1490...", server: "130.49.189.158", port: 43558, type: "ss", udp: true, skip-cert-verify: true}
-  # 178ms  vless
-  - {name: "🇩🇪[www.v2nodes.com] vless-DE-1... #5", server: "37.18.14.177", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 181ms  vless
-  - {name: "🇸🇪 瑞典 | SWE #3", server: "87.242.94.43", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 181ms  vless
-  - {name: "🇳🇱 荷兰 | NLD #4", server: "87.242.94.42", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 182ms  trojan
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-11", server: "sclass-c2.catcat321.com", port: 20051, type: "trojan", udp: true, skip-cert-verify: true}
-  # 182ms  ss
-  - {name: "🇷🇺[www.v2nodes.com] ss-RU-1163...", server: "90.156.203.62", port: 5112, type: "ss", udp: true, skip-cert-verify: true}
-  # 183ms  vless
-  - {name: "🇷🇺 俄罗斯 | RUS 3", server: "201.24.116.192", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 184ms  vless
-  - {name: "🇷🇺[www.v2nodes.com] vless-RU-1... #1", server: "201.24.121.243", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 184ms  vless
-  - {name: "🇳🇱[www.v2nodes.com] vless-NL-1... #5", server: "31.177.111.134", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 185ms  vless
-  - {name: "136.148.208.221:443", server: "136.148.208.221", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 185ms  vless
-  - {name: "196.245.52.183:443", server: "196.245.52.183", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 186ms  vless
-  - {name: "201.51.12.98:443", server: "201.51.12.98", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 187ms  vless
-  - {name: "87.76.154.28:57231", server: "87.76.154.28", port: 57231, type: "vless", udp: true, skip-cert-verify: true}
-  # 187ms  vless
-  - {name: "201.34.142.108:443", server: "201.34.142.108", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 189ms  vless
-  - {name: "🇩🇪 德国 | DEU #5", server: "193.160.208.240", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 192ms  vless
-  - {name: "150.95.109.109:2086", server: "150.95.109.109", port: 2086, type: "vless", udp: true, skip-cert-verify: true}
-  # 207ms  vless
-  - {name: "🇺🇸 美国 | USA #5", server: "sparkling-gadabout.quick-cdn.net", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 218ms  vless
-  - {name: "13.140.56.100:14430", server: "13.140.56.100", port: 14430, type: "vless", udp: true, skip-cert-verify: true}
-  # 218ms  vless
-  - {name: "196.196.148.63:443", server: "196.196.148.63", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 224ms  trojan
-  - {name: "🇫🇷 FR法国(mibei77.com 米贝节点分享)", server: "sclass-00.catcat321.com", port: 20123, type: "trojan", udp: true, skip-cert-verify: true}
-  # 225ms  trojan
-  - {name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-12", server: "sclass-00.catcat321.com", port: 20103, type: "trojan", udp: true, skip-cert-verify: true}
-  # 233ms  vless
-  - {name: "95.174.68.188:14430", server: "95.174.68.188", port: 14430, type: "vless", udp: true, skip-cert-verify: true}
-  # 236ms  vless
-  - {name: "5.129.202.80:443", server: "5.129.202.80", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 240ms  vless
-  - {name: "node-uk.connectsuite.org:8443", server: "node-uk.connectsuite.org", port: 8443, type: "vless", udp: true, skip-cert-verify: true}
-  # 244ms  trojan
-  - {name: "15.235.184.127:443", server: "15.235.184.127", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 246ms  trojan
-  - {name: "🇯🇵 日本 V2CROSS.COM", server: "sclass-c1.catcat321.com", port: 20086, type: "trojan", udp: true, skip-cert-verify: true}
-  # 270ms  ss
-  - {name: "🇿🇦[www.v2nodes.com] ss-ZA-1336...", server: "102.37.156.224", port: 443, type: "ss", udp: true, skip-cert-verify: true}
-  # 271ms  ss
-  - {name: "🇿🇦[www.v2nodes.com] ss-ZA-1333...", server: "102.133.165.160", port: 16233, type: "ss", udp: true, skip-cert-verify: true}
-  # 280ms  vless
-  - {name: "ov-france1.09vpn.com:80", server: "ov-france1.09vpn.com", port: 80, type: "vless", udp: true, skip-cert-verify: true}
-  # 297ms  vless
-  - {name: "13.141.51.2:443", server: "13.141.51.2", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 303ms  vless
-  - {name: "freev2.cloudflare.182682.xyz:443", server: "freev2.cloudflare.182682.xyz", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 307ms  vless
-  - {name: "🇵🇱[www.v2nodes.com] vless-PL-1... #4", server: "r0xnfzk9ud.newwl.pro", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 320ms  vless
-  - {name: "free-config-bot-development-33s35.lucity.app:443", server: "free-config-bot-development-33s35.lucity.app", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 320ms  vless
-  - {name: "🇩🇪[www.v2nodes.com] vless-DE-1... #3", server: "ir2.cryptojakiro.com", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 326ms  vless
-  - {name: "196.245.52.187:443", server: "196.245.52.187", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 344ms  vless
-  - {name: "🇸🇬[www.v2nodes.com] vless-SG-8...", server: "cf.090227.xyz", port: 8443, type: "vless", udp: true, skip-cert-verify: true}
-  # 348ms  vmess
-  - {name: "cf.090227.xyz:443", server: "cf.090227.xyz", port: 443, type: "vmess", udp: true, skip-cert-verify: true}
-  # 365ms  vless
-  - {name: "🏳[www.v2nodes.com] vless- #6", server: "3h-kazakhstan1.09vpn.com", port: 8443, type: "vless", udp: true, skip-cert-verify: true}
-  # 400ms  vless
-  - {name: "AT_speednode_0001", server: "au2.pad-sservice.lat", port: 8443, type: "vless", udp: true, skip-cert-verify: true}
-  # 411ms  vless
-  - {name: "🇷🇺 俄罗斯 | RUS 5", server: "pebble.gerqix.online", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 435ms  vless
-  - {name: "🇺🇸 美国 | USA #4", server: "ryanserver.ir", port: 18434, type: "vless", udp: true, skip-cert-verify: true}
-  # 443ms  vless
-  - {name: "de9.pad-sservice.lat:8443", server: "de9.pad-sservice.lat", port: 8443, type: "vless", udp: true, skip-cert-verify: true}
-  # 446ms  vless
-  - {name: "devlayer.tech:9443", server: "devlayer.tech", port: 9443, type: "vless", udp: true, skip-cert-verify: true}
-  # 500ms  vmess
-  - {name: "cdns.doon.eu.org:443", server: "cdns.doon.eu.org", port: 443, type: "vmess", udp: true, skip-cert-verify: true}
-  # 532ms  vless
-  - {name: "vl-x1.qz10086.top:38011", server: "vl-x1.qz10086.top", port: 38011, type: "vless", udp: true, skip-cert-verify: true}
-  # 553ms  ss
-  - {name: "🇷🇴[www.v2nodes.com] ss-RO-1595...", server: "194.68.44.42", port: 64546, type: "ss", udp: true, skip-cert-verify: true}
-  # 576ms  vless
-  - {name: "lodizu.hagrid-connected.com:443", server: "lodizu.hagrid-connected.com", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 587ms  vless
-  - {name: "fc82dfx.nl8.h1clayd.click:443", server: "fc82dfx.nl8.h1clayd.click", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 610ms  vless
-  - {name: "80cb66x.nl13.h1clayd.click:443", server: "80cb66x.nl13.h1clayd.click", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 642ms  vless
-  - {name: "www.true.th:80", server: "www.true.th", port: 80, type: "vless", udp: true, skip-cert-verify: true}
-  # 697ms  hysteria2
-  - {name: "美国_1119064300", server: "s5.libertyrunet.store", port: 443, type: "hysteria2", udp: true, skip-cert-verify: true}
-  # 720ms  vless
-  - {name: "free.fugui.lol:47396", server: "free.fugui.lol", port: 47396, type: "vless", udp: true, skip-cert-verify: true}
-  # 720ms  vless
-  - {name: "free.fugui.lol:62015", server: "free.fugui.lol", port: 62015, type: "vless", udp: true, skip-cert-verify: true}
-  # 850ms  vless
-  - {name: "sub.macdonalder.cyou:56221", server: "sub.macdonalder.cyou", port: 56221, type: "vless", udp: true, skip-cert-verify: true}
-  # 1115ms  vless
-  - {name: "gold.jafarghasemiturkk.ir:8080", server: "gold.jafarghasemiturkk.ir", port: 8080, type: "vless", udp: true, skip-cert-verify: true}
-  # 1236ms  vless
-  - {name: "196.196.148.85:443", server: "196.196.148.85", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 1420ms  vless
-  - {name: "5d0319t.nl7.h1clayd.click:443", server: "5d0319t.nl7.h1clayd.click", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 1556ms  vless
-  - {name: "8a2e72t.nl20.h1clayd.shop:443", server: "8a2e72t.nl20.h1clayd.shop", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 1558ms  vless
-  - {name: "345739t.de15.h1clayd.click:443", server: "345739t.de15.h1clayd.click", port: 443, type: "vless", udp: true, skip-cert-verify: true}
-  # 1672ms  trojan
-  - {name: "alireza.karamoz1.ir:443", server: "alireza.karamoz1.ir", port: 443, type: "trojan", udp: true, skip-cert-verify: true}
-  # 2280ms  vless
-  - {name: "84.235.244.108:22573", server: "84.235.244.108", port: 22573, type: "vless", udp: true, skip-cert-verify: true}
+  - name: "104.17.145.145:2083"
+    type: vless
+    server: "104.17.145.145"
+    port: 2083
+    uuid: "a6ad7987-f17e-41fa-a752-72db9a725eb2"
+    network: ws
+    tls: true
+    servername: "vipfree.dr-ping.ir"
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "172.64.79.163:2083"
+    type: vless
+    server: "172.64.79.163"
+    port: 2083
+    uuid: "a6ad7987-f17e-41fa-a752-72db9a725eb2"
+    network: ws
+    tls: true
+    servername: "vipfree.dr-ping.ir"
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "'🏳[www.v2nodes.com] vless- #19'"
+    type: vless
+    server: "199.232.78.159"
+    port: 443
+    uuid: "97e0ea78-67ae-4984-8a14-a7d1a51e58de"
+    network: ws
+    tls: true
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "'🇺🇸[www.v2nodes.com] vless-US-1... #6'"
+    type: vless
+    server: "199.232.78.160"
+    port: 443
+    uuid: "97e0ea78-67ae-4984-8a14-a7d1a51e58de"
+    network: ws
+    tls: true
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "'🇸🇬[www.v2nodes.com] vless-SG-7... #2'"
+    type: vless
+    server: "104.18.109.147"
+    port: 2052
+    uuid: "c29d39bd-92a4-45db-bb61-56013998617c"
+    network: ws
+    ws-opts:
+      path: "/Telegram-XV2ry2?ed=2048"
+    udp: true
+  - name: "'🏳[www.v2nodes.com] vless- #15'"
+    type: vless
+    server: "172.67.131.125"
+    port: 2083
+    uuid: "f418674e-f518-4318-8ff9-e10000000046"
+    network: ws
+    tls: true
+    servername: "smart-edge-424.arti98399-1905.workers.dev"
+    ws-opts:
+      path: "/sync"
+    udp: true
+  - name: "🇸🇬[www.v2nodes.com] vless-SG-7..."
+    type: vless
+    server: "141.193.213.10"
+    port: 443
+    uuid: "977b814d-d9e0-4889-bb71-98d6bfb8f462"
+    network: ws
+    tls: true
+    servername: "partner.catchplay.com.r3xxe.eu.cc"
+    ws-opts:
+      path: "/sg-amz"
+    udp: true
+  - name: "🇯🇵[www.v2nodes.com] vless-JP-1..."
+    type: vless
+    server: "104.16.10.9"
+    port: 443
+    uuid: "4e4f1f70-5e56-4a76-bb9d-db087f4690c4"
+    network: ws
+    tls: true
+    servername: "jp3.yohototo.top"
+    ws-opts:
+      path: "/tyxyws"
+    udp: true
+  - name: "🇮🇳[www.v2nodes.com] vless-IN-1..."
+    type: vless
+    server: "188.114.99.137"
+    port: 443
+    uuid: "c1208c5a-2350-0003-affd-fc41b4319286"
+    network: ws
+    tls: true
+    servername: "decdn-28.nome-rkp.net"
+    ws-opts:
+      path: "/media/ws/"
+    udp: true
+  - name: "🇬🇧[www.v2nodes.com] vless-GB-1..."
+    type: vless
+    server: "88.216.67.54"
+    port: 443
+    uuid: "50414e45-4c5f-5a45-5553-47be357e54da"
+    network: ws
+    tls: true
+    servername: "52z4vtewuass.game4090taking.workers.dev"
+    ws-opts:
+      path: "/stream/PANEL_ZEUS/47be357e54da/loc-0"
+    udp: true
+  - name: "'🇫🇷[www.v2nodes.com] vless-FR-1... #1'"
+    type: vless
+    server: "199.232.78.120"
+    port: 443
+    uuid: "8d2cbffd-43d0-458d-906b-7c54b7b51f38"
+    network: ws
+    tls: true
+    servername: "cdn.akamai.steamstatic.com"
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "🇫🇮[www.v2nodes.com] vless-FI-1..."
+    type: vless
+    server: "198.202.24.142"
+    port: 2083
+    uuid: "a6ad7987-f17e-41fa-a752-72db9a725eb2"
+    network: ws
+    tls: true
+    servername: "vipfree.dr-ping.ir"
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "🇨🇦[www.v2nodes.com] vless-CA"
+    type: vless
+    server: "27.50.48.6"
+    port: 443
+    uuid: "c98a16e4-0dc5-42f0-b3db-30f04525c123"
+    network: ws
+    tls: true
+    servername: "vless2-8vx.pages.dev"
+    ws-opts:
+      path: "/fp=chrome"
+    udp: true
+  - name: "'🏳[www.v2nodes.com] vless- #14'"
+    type: vless
+    server: "104.26.13.31"
+    port: 8080
+    uuid: "3e06b1db-2efb-446e-ba2d-68850dfd2f9d"
+    network: ws
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "'🇸🇬[www.v2nodes.com] vless-SG-7... #1'"
+    type: vless
+    server: "188.114.98.0"
+    port: 443
+    uuid: "ec24cde1-6bd9-4b69-baf7-270e8aabd6dd"
+    network: ws
+    tls: true
+    servername: "rayAN21-6yU73878-v3.raYAn-21.woRKers.dEV"
+    ws-opts:
+      path: "/?ed=2560fp=unsafe"
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)"
+    type: trojan
+    server: "199.232.249.131"
+    port: 443
+    password: "SiFvGI5bX01GGtGOJ2_nxA"
+    sni: "cdn.akamai.steamstatic.com"
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
+    type: trojan
+    server: "104.16.148.5"
+    port: 443
+    password: "19877587-ed94-4033-88cd-4ac50a5e8718"
+    sni: "dimskiee.biz.id"
+    udp: true
+  - name: "🇺🇸 美国5|@ripaojiedian"
+    type: trojan
+    server: "151.101.110.219"
+    port: 443
+    password: "Mitivpn"
+    sni: "ssl.fastly.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇺🇸 美国|@ripaojiedian"
+    type: trojan
+    server: "167.82.76.27"
+    port: 443
+    password: "MiTiVPN"
+    sni: "ssl.fastly.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "216.152.147.74:443"
+    type: trojan
+    server: "216.152.147.74"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+  - name: "216.152.147.79:443"
+    type: trojan
+    server: "216.152.147.79"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "blog.connectingpeoplewithgreatjobs.com"
+    udp: true
+  - name: "216.152.147.93:443"
+    type: trojan
+    server: "216.152.147.93"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "connectingpeoplewithgreatjobs.com"
+    udp: true
+  - name: "216.152.147.152:443"
+    type: trojan
+    server: "216.152.147.152"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+  - name: "192.255.152.147:443"
+    type: hysteria2
+    server: "192.255.152.147"
+    port: 443
+    password: "yO8pug5XmwkBXBAjleYIaVt"
+    sni: "192.255.152.147"
+    skip-cert-verify: true
+    udp: true
+  - name: "162.35.101.177:443"
+    type: vless
+    server: "162.35.101.177"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    network: grpc
+    tls: true
+    servername: "0592efg.us8.h1clayd.click"
+    udp: true
+  - name: "192.74.236.148:30004"
+    type: vmess
+    server: "192.74.236.148"
+    port: 30004
+    uuid: "418048af-a293-4b99-9b0c-98ca3580dd24"
+    alterId: 64
+    cipher: "auto"
+    network: ws
+    tls: true
+    servername: "www.91334565.xyz"
+    ws-opts:
+      path: "/path/1733477783705"
+      headers:
+        Host: "www.91334565.xyz"
+    udp: true
+  - name: "57.129.132.223:80"
+    type: vless
+    server: "57.129.132.223"
+    port: 80
+    uuid: "9e20b04d-5a81-4e16-b421-01e502f0aac6"
+    network: ws
+    ws-opts:
+      path: "/vless/"
+    udp: true
+  - name: "138.124.70.41:14430"
+    type: vless
+    server: "138.124.70.41"
+    port: 14430
+    uuid: "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc"
+    network: ws
+    ws-opts:
+      path: "/vless"
+    udp: true
+  - name: "66.163.127.215:443"
+    type: trojan
+    server: "66.163.127.215"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+  - name: "66.163.127.225:443"
+    type: trojan
+    server: "66.163.127.225"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "cdn.indyourperfectremotetechjobfromthecomfortofhome.com"
+    udp: true
+  - name: "193.108.119.78:443"
+    type: trojan
+    server: "193.108.119.78"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+  - name: "193.108.119.15:443"
+    type: trojan
+    server: "193.108.119.15"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "courses.iloverussia2026.com"
+    udp: true
+  - name: "193.108.119.96:443"
+    type: trojan
+    server: "193.108.119.96"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "learn.iloverussia2026.com"
+    udp: true
+  - name: "防失效github+SubCrawler俄罗斯联邦_111906264"
+    type: hysteria2
+    server: "95.140.147.245"
+    port: 443
+    password: "9yOIR2_QAChKs26rYaiX_aoNnOALd0aU"
+    sni: "nl1server.rabstvo.shop"
+    udp: true
+  - name: "🇩🇪 DE德国(mibei77.com 米贝节点分享)"
+    type: ss
+    server: "47.254.169.3"
+    port: 443
+    cipher: "2022-blake3-chacha20-poly1305"
+    password: "8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y="
+    udp: true
+  - name: "cf.008500.xyz:443"
+    type: vless
+    server: "cf.008500.xyz"
+    port: 443
+    uuid: "5dc15e15-f285-4a9d-959b-0e4fbdd77b63"
+    network: ws
+    tls: true
+    servername: "powered-by-surena.configfarsi695fd01a94fe7.workers.dev"
+    ws-opts:
+      path: "/?ed=2560fp=chrome"
+    udp: true
+  - name: "'🏳[www.v2nodes.com] vless- #2'"
+    type: vless
+    server: "5.83.129.236"
+    port: 443
+    uuid: "d86e6fda-e519-46ab-98eb-9ff9a9da5984"
+    network: grpc
+    tls: true
+    servername: "host-de-upscale.cdn.cachefleet.com"
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-2"
+    type: ss
+    server: "47.254.143.251"
+    port: 443
+    cipher: "2022-blake3-chacha20-poly1305"
+    password: "8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y="
+    udp: true
+  - name: "179.61.138.145:443"
+    type: hysteria2
+    server: "179.61.138.145"
+    port: 443
+    password: "Telegram"
+    sni: "de2.jey.cc.cd"
+    obfs: "salamander"
+    obfs-password: "Telegram@vpnjey"
+    skip-cert-verify: true
+    udp: true
+  - name: "'🇳🇱[www.v2nodes.com] vless-NL-1... #6'"
+    type: vless
+    server: "194.60.228.97"
+    port: 443
+    uuid: "667016ca-f02e-4b5f-bfc3-3d8ed81e9bec"
+    network: tcp
+    tls: true
+    servername: "base.hosamobenl.co.uk"
+    udp: true
+  - name: "130.49.161.70:443"
+    type: hysteria2
+    server: "130.49.161.70"
+    port: 443
+    password: "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR"
+    sni: "hy2.aspidnet.xyz"
+    obfs: "salamander"
+    obfs-password: "rG07s3COMIEvdnQipRyWzx_H_2xygNC3"
+    udp: true
+  - name: "66.163.118.244:443"
+    type: trojan
+    server: "66.163.118.244"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+  - name: "66.163.118.40:443"
+    type: trojan
+    server: "66.163.118.40"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+  - name: "66.163.118.203:443"
+    type: trojan
+    server: "66.163.118.203"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-3"
+    type: trojan
+    server: "sclass-c2.catcat321.com"
+    port: 20051
+    password: "d9064589-74af-432a-9390-5d8a9da281bf"
+    sni: "hk.catxstar.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "英国_111906013"
+    type: hysteria2
+    server: "31.76.106.92"
+    port: 8443
+    password: "2d399e38-245c-4f07-abf2-cfce7397ba9c"
+    sni: "va.stream-room.com"
+    udp: true
+  - name: "88.216.60.73:443"
+    type: vless
+    server: "88.216.60.73"
+    port: 443
+    uuid: "a30903dc-1bf0-4be5-8b1b-603a3a56211c"
+    network: tcp
+    tls: true
+    servername: "ns-api-gw.galioncc.com"
+    udp: true
+  - name: "208.69.78.33:443"
+    type: trojan
+    server: "208.69.78.33"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "courses.yourultimateprofessionalcareerhub.com"
+    udp: true
+  - name: "208.69.78.158:443"
+    type: trojan
+    server: "208.69.78.158"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+  - name: "🇮🇹 意大利(mibei77.com 米贝节点分享)"
+    type: ss
+    server: "202.50.253.81"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇮🇹 意大利2|@ripaojiedian"
+    type: ss
+    server: "202.50.253.27"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-4"
+    type: ss
+    server: "202.50.253.90"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-5"
+    type: ss
+    server: "202.50.253.18"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-6"
+    type: ss
+    server: "202.50.253.54"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-7"
+    type: ss
+    server: "202.50.253.45"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-8"
+    type: ss
+    server: "202.50.253.36"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-9"
+    type: ss
+    server: "202.50.253.72"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-10"
+    type: ss
+    server: "202.50.253.99"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "191.217.206.147:8443"
+    type: vless
+    server: "191.217.206.147"
+    port: 8443
+    uuid: "67864856-8730-40cc-9e1a-a0df697d912b"
+    network: xhttp
+    tls: true
+    servername: "de.krabvpn.pro"
+    udp: true
+  - name: "2.27.14.122:9443"
+    type: vless
+    server: "2.27.14.122"
+    port: 9443
+    uuid: "0b22812b-4a79-42b1-93ec-5b157b0f2f7f"
+    network: xhttp
+    tls: true
+    servername: "fin.krabvpn.pro"
+    udp: true
+  - name: "191.217.206.147:443"
+    type: vless
+    server: "191.217.206.147"
+    port: 443
+    uuid: "0b22812b-4a79-42b1-93ec-5b157b0f2f7f"
+    network: xhttp
+    tls: true
+    servername: "sw.krabvpn.pro"
+    udp: true
+  - name: "191.217.206.147:9443"
+    type: vless
+    server: "191.217.206.147"
+    port: 9443
+    uuid: "0b22812b-4a79-42b1-93ec-5b157b0f2f7f"
+    network: xhttp
+    tls: true
+    servername: "fin.krabvpn.pro"
+    udp: true
+  - name: "191.217.206.147:6443"
+    type: vless
+    server: "191.217.206.147"
+    port: 6443
+    uuid: "0b22812b-4a79-42b1-93ec-5b157b0f2f7f"
+    network: xhttp
+    tls: true
+    servername: "nl.krabvpn.pro"
+    udp: true
+  - name: "45.144.234.157:14430"
+    type: vless
+    server: "45.144.234.157"
+    port: 14430
+    uuid: "59b0d30e-9b29-4fda-a35c-b2901ec32db7"
+    network: ws
+    ws-opts:
+      path: "/vless"
+    udp: true
+  - name: "2.27.14.122:8443"
+    type: vless
+    server: "2.27.14.122"
+    port: 8443
+    uuid: "67864856-8730-40cc-9e1a-a0df697d912b"
+    network: xhttp
+    tls: true
+    servername: "de.krabvpn.pro"
+    udp: true
+  - name: "南非_111906020"
+    type: hysteria2
+    server: "192.142.23.46"
+    port: 443
+    password: "a0052f4f-4c63-0002-a16f-ab2d5d718cd3"
+    sni: "diffoscope.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "5.178.109.174:14430"
+    type: vless
+    server: "5.178.109.174"
+    port: 14430
+    uuid: "80de563a-cac8-40ea-8cb0-4cb082dd92f9"
+    network: ws
+    ws-opts:
+      path: "/vless"
+    udp: true
+  - name: "191.217.206.147:7443"
+    type: vless
+    server: "191.217.206.147"
+    port: 7443
+    uuid: "67864856-8730-40cc-9e1a-a0df697d912b"
+    network: xhttp
+    tls: true
+    servername: "pl-origin.krabvpn.pro"
+    udp: true
+  - name: "瑞典_111906166"
+    type: hysteria2
+    server: "95.143.196.97"
+    port: 443
+    password: "769f34f0-1500-488f-b414-03bc90666502"
+    sni: "se.mimowhat.online"
+    udp: true
+  - name: "80.47.10.106:443"
+    type: vless
+    server: "80.47.10.106"
+    port: 443
+    uuid: "a30903dc-1bf0-4be5-8b1b-603a3a56211c"
+    network: tcp
+    tls: true
+    servername: "pl8.galioncc.com"
+    udp: true
+  - name: "178.172.227.124:10443"
+    type: vless
+    server: "178.172.227.124"
+    port: 10443
+    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    network: tcp
+    udp: true
+  - name: "216.238.104.154:443"
+    type: trojan
+    server: "216.238.104.154"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    udp: true
+  - name: "'🇸🇪[www.v2nodes.com] vless-SE-1... #2'"
+    type: vless
+    server: "138.124.86.230"
+    port: 48115
+    uuid: "b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b"
+    network: grpc
+    tls: true
+    servername: "138-124-86-230.sslip.io"
+    udp: true
+  - name: "45.86.60.174:16443"
+    type: vless
+    server: "45.86.60.174"
+    port: 16443
+    uuid: "13e541f3-d09d-4633-89df-8513db0ced20"
+    network: tcp
+    udp: true
+  - name: "31.76.80.69:443"
+    type: hysteria2
+    server: "31.76.80.69"
+    port: 443
+    password: "6aab8efdf13945829ae3699c342be406"
+    sni: "fiproxy1.lockdwn.com"
+    obfs: "salamander"
+    obfs-password: "uw9b2qq5rx"
+    udp: true
+  - name: "48.103.218.241:18443"
+    type: ss
+    server: "48.103.218.241"
+    port: 18443
+    cipher: "aes-256-gcm"
+    password: "Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE"
+    udp: true
+  - name: "178.172.227.228:14430"
+    type: vless
+    server: "178.172.227.228"
+    port: 14430
+    uuid: "b6e5dc56-836f-48c1-9163-b0b0b43b647d"
+    network: ws
+    ws-opts:
+      path: "/vless"
+    udp: true
+  - name: "87.76.154.28:57231"
+    type: vless
+    server: "87.76.154.28"
+    port: 57231
+    uuid: "c34a41b6-598f-46ac-bea3-8b39a906f922"
+    network: tcp
+    udp: true
+  - name: "'🇸🇪 瑞典 | SWE #3'"
+    type: vless
+    server: "87.242.94.43"
+    port: 443
+    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
+    network: ws
+    tls: true
+    servername: "87.242.94.43"
+    ws-opts:
+      path: "/api/v2/session/CAgikYAkk4z7"
+    udp: true
+  - name: "201.51.12.98:443"
+    type: vless
+    server: "201.51.12.98"
+    port: 443
+    uuid: "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
+    network: grpc
+    tls: true
+    servername: "vps3.nemnogogo.com"
+    udp: true
+  - name: "201.34.142.108:443"
+    type: vless
+    server: "201.34.142.108"
+    port: 443
+    uuid: "4777d90d-265b-4927-a0d1-63f36ed1421c"
+    network: xhttp
+    tls: true
+    udp: true
+  - name: "🇷🇺 俄罗斯 | RUS 3"
+    type: vless
+    server: "201.24.116.192"
+    port: 443
+    uuid: "38308ff1-5aa9-494f-a25a-0f2870d56b3e"
+    network: grpc
+    tls: true
+    servername: "vps3.nemnogogo.com"
+    udp: true
+  - name: "'🇩🇪 德国 | DEU #5'"
+    type: vless
+    server: "193.160.208.240"
+    port: 443
+    uuid: "4777d90d-265b-4927-a0d1-63f36ed1421c"
+    network: xhttp
+    tls: true
+    servername: "193.160.208.240"
+    udp: true
+  - name: "196.245.52.183:443"
+    type: vless
+    server: "196.245.52.183"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    network: grpc
+    tls: true
+    servername: "15b171g.nl7.h1clayd.click"
+    udp: true
+  - name: "'🇳🇱[www.v2nodes.com] vless-NL-1... #5'"
+    type: vless
+    server: "31.177.111.134"
+    port: 443
+    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
+    network: ws
+    tls: true
+    servername: "k6t8wxun3s.schoolbag.top"
+    ws-opts:
+      path: "/static/metrics/86d07ea17ea1/"
+    udp: true
+  - name: "'🇳🇱 荷兰 | NLD #4'"
+    type: vless
+    server: "87.242.94.42"
+    port: 443
+    uuid: "fd90e601-a56c-42b8-aab7-aa02d26fcb04"
+    network: ws
+    tls: true
+    servername: "87.242.94.42"
+    ws-opts:
+      path: "/cart/sync/iJa-_8Pi4FjK"
+    udp: true
+  - name: "🇸🇬 SG新加坡(mibei77.com 米贝节点分享)"
+    type: trojan
+    server: "sclass-01.catcat321.com"
+    port: 20103
+    password: "d7563108-615c-4338-a7bd-77f359869a4a"
+    sni: "hk.catxstar.com"
+    udp: true
+  - name: "'🇷🇺[www.v2nodes.com] vless-RU-1... #1'"
+    type: vless
+    server: "201.24.121.243"
+    port: 443
+    uuid: "32b5ca9b-3f81-4031-965d-e8b074216e8d"
+    network: grpc
+    tls: true
+    servername: "kk-ru24a1.testkknegr.online"
+    udp: true
+  - name: "'🇩🇪[www.v2nodes.com] vless-DE-1... #5'"
+    type: vless
+    server: "37.18.14.177"
+    port: 443
+    uuid: "7955bf18-35c4-412d-aabd-c0b36c793063"
+    network: ws
+    tls: true
+    servername: "owj5svd907.deshevayashaurma.icu"
+    ws-opts:
+      path: "/static/collect/037b5c44e12a/"
+    udp: true
+  - name: "🇲🇾[www.v2nodes.com] vless-MY-1..."
+    type: vless
+    server: "382218.xyz"
+    port: 443
+    uuid: "d801d4d9-111a-46e8-91fc-e2fb39ef2d22"
+    network: ws
+    tls: true
+    servername: "382218.xyz"
+    ws-opts:
+      path: "/ws"
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-11"
+    type: trojan
+    server: "sclass-b1.catcat321.com"
+    port: 20051
+    password: "d7563108-615c-4338-a7bd-77f359869a4a"
+    sni: "hk.catxstar.com"
+    udp: true
+  - name: "196.196.148.63:443"
+    type: vless
+    server: "196.196.148.63"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    network: xhttp
+    tls: true
+    servername: "fc82dfx.nl8.h1clayd.click"
+    udp: true
+  - name: "95.174.68.188:14430"
+    type: vless
+    server: "95.174.68.188"
+    port: 14430
+    uuid: "965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0"
+    network: ws
+    ws-opts:
+      path: "/vless"
+    udp: true
+  - name: "158.247.253.243:443"
+    type: trojan
+    server: "158.247.253.243"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "connectgraduateswithjobopeningsandgrowprofessionally.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "5.129.202.80:443"
+    type: vless
+    server: "5.129.202.80"
+    port: 443
+    uuid: "7ad63b26-bf70-4872-8fab-ebaf73a1e19d"
+    network: tcp
+    tls: true
+    servername: "mirror-50.topp-con.xyz"
+    flow: "xtls-rprx-vision"
+    udp: true
+  - name: "45.63.30.142:443"
+    type: trojan
+    server: "45.63.30.142"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "connectwithemployerstohireyouridealteam.com"
+    udp: true
+  - name: "🇹🇼[www.v2nodes.com] vless-TW-1..."
+    type: vless
+    server: "60.248.219.53"
+    port: 443
+    uuid: "c1c04450-bf71-4049-ad0c-9cf6d94d9f1f"
+    network: ws
+    tls: true
+    servername: "ty986gfazs.cainiaohub.xyz"
+    ws-opts:
+      path: "/81574b6b-c9d7-44a0-b83d-dad56e8cb530"
+    udp: true
+  - name: "47.242.93.89:12012"
+    type: trojan
+    server: "47.242.93.89"
+    port: 12012
+    password: "'12012'"
+    sni: "ali-hk.b-gfw.cfd"
+    skip-cert-verify: true
+    udp: true
+  - name: "152.69.226.63:25555"
+    type: vless
+    server: "152.69.226.63"
+    port: 25555
+    uuid: "27c5483f-17f4-48ae-9a04-def53d88440d"
+    network: ws
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "ov-france1.09vpn.com:80"
+    type: vless
+    server: "ov-france1.09vpn.com"
+    port: 80
+    uuid: "25f86cb1-2140-4085-abcb-c3a0ea7a4be0"
+    network: ws
+    ws-opts:
+      path: "/vless/"
+    udp: true
+  - name: "'🇸🇬[www.v2nodes.com] vless-SG-1... #3'"
+    type: vless
+    server: "139.162.27.96"
+    port: 2096
+    uuid: "6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2"
+    network: ws
+    tls: true
+    servername: "free-server.techsonic.dev"
+    ws-opts:
+      path: "/free-server.techsonic.dev"
+    udp: true
+  - name: "47.250.84.25:443"
+    type: trojan
+    server: "47.250.84.25"
+    port: 443
+    password: "5931134d1cde66bf83a54acdfebe7ab2"
+    udp: true
+  - name: "'🇸🇬[www.v2nodes.com] vless-SG-1... #2'"
+    type: vless
+    server: "207.148.124.12"
+    port: 8443
+    uuid: "bcdb425f-80bc-4ec8-92a5-8edf53639c01"
+    network: tcp
+    tls: true
+    servername: "www.bing.com"
+    udp: true
+  - name: "13.141.51.2:443"
+    type: vless
+    server: "13.141.51.2"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    network: tcp
+    tls: true
+    servername: "04535dt.us8.h1clayd.click"
+    udp: true
+  - name: "150.95.109.109:2086"
+    type: vless
+    server: "150.95.109.109"
+    port: 2086
+    uuid: "b83faafc-cbb7-4655-99d4-2c4c39a49d1b"
+    network: tcp
+    udp: true
+  - name: "assets.opensignal.com:80"
+    type: vless
+    server: "assets.opensignal.com"
+    port: 80
+    uuid: "0c85001b-ad48-4f43-bdc9-b2b5c626a26e"
+    network: ws
+    ws-opts:
+      path: "/logout"
+    udp: true
+  - name: "196.245.52.187:443"
+    type: vless
+    server: "196.245.52.187"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    network: xhttp
+    tls: true
+    servername: "35295cx.us8.h1clayd.click"
+    udp: true
+  - name: "13.140.56.100:14430"
+    type: vless
+    server: "13.140.56.100"
+    port: 14430
+    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
+    network: ws
+    ws-opts:
+      path: "/vless"
+    udp: true
+  - name: "🇸🇬[www.v2nodes.com] vless-SG-8..."
+    type: vless
+    server: "cf.090227.xyz"
+    port: 8443
+    uuid: "889fa37f-6bce-4674-8a49-1cc435e11de7"
+    network: ws
+    tls: true
+    servername: "liusuyan.cc.cd"
+    ws-opts:
+      path: "/proxyip=ProxyIP.SG.CMLiussss.Net"
+    udp: true
+  - name: "cf.090227.xyz:443"
+    type: vmess
+    server: "cf.090227.xyz"
+    port: 443
+    uuid: "0cf6d970-3f1d-4aae-a989-92a8f76ae3db"
+    alterId: 0
+    cipher: "auto"
+    network: ws
+    tls: true
+    servername: "vmess.lbw666.dpdns.org"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "vmess.lbw666.dpdns.org"
+    udp: true
+  - name: "'🇩🇪[www.v2nodes.com] vless-DE-1... #3'"
+    type: vless
+    server: "ir2.cryptojakiro.com"
+    port: 443
+    uuid: "8a1a991a-f206-447a-adaf-37a57c133418"
+    network: ws
+    tls: true
+    servername: "ir2.cryptojakiro.com"
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "'🇵🇱[www.v2nodes.com] vless-PL-1... #4'"
+    type: vless
+    server: "r0xnfzk9ud.newwl.pro"
+    port: 443
+    uuid: "7955bf18-35c4-412d-aabd-c0b36c793063"
+    network: ws
+    tls: true
+    servername: "r0xnfzk9ud.newwl.pro"
+    ws-opts:
+      path: "/service/telemetry/045d381f1166/"
+    udp: true
+  - name: "15.235.184.127:443"
+    type: trojan
+    server: "15.235.184.127"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "exploredigitaljobplatformandfindonlinework.com"
+    udp: true
+  - name: "🇯🇵 日本2|@ripaojiedian"
+    type: trojan
+    server: "v2jp.k1.ssnss.live"
+    port: 44184
+    password: "d050aca3-9df2-4461-90ec-92373c1d7636"
+    skip-cert-verify: true
+    udp: true
+  - name: "'🇺🇸 美国 | USA #5'"
+    type: vless
+    server: "sparkling-gadabout.quick-cdn.net"
+    port: 443
+    uuid: "de0a8f24-439a-489a-844e-e1336ab1586a"
+    network: ws
+    tls: true
+    servername: "sparkling-gadabout.quick-cdn.net"
+    ws-opts:
+      path: "/ws"
+    udp: true
+  - name: "🇫🇷 FR法国(mibei77.com 米贝节点分享)"
+    type: trojan
+    server: "sclass-00.catcat321.com"
+    port: 20123
+    password: "d9064589-74af-432a-9390-5d8a9da281bf"
+    sni: "hk.catxstar.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-12"
+    type: trojan
+    server: "sclass-00.catcat321.com"
+    port: 20103
+    password: "d9064589-74af-432a-9390-5d8a9da281bf"
+    sni: "hk.catxstar.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "🇯🇵 日本 V2CROSS.COM"
+    type: trojan
+    server: "sclass-c1.catcat321.com"
+    port: 20086
+    password: "d9064589-74af-432a-9390-5d8a9da281bf"
+    sni: "hk.catxstar.com"
+    udp: true
+  - name: "sclass-b1.catcat321.com:20027"
+    type: trojan
+    server: "sclass-b1.catcat321.com"
+    port: 20027
+    password: "d7563108-615c-4338-a7bd-77f359869a4a"
+    sni: "hk.catxstar.com"
+    udp: true
+  - name: "'🏳[www.v2nodes.com] vless- #6'"
+    type: vless
+    server: "3h-kazakhstan1.09vpn.com"
+    port: 8443
+    uuid: "2424febb-43cb-488d-bdd1-401e923c8e48"
+    network: ws
+    tls: true
+    servername: "3h-kazakhstan1.09vpn.com"
+    ws-opts:
+      path: "/vless/"
+    udp: true
+  - name: "node-uk.connectsuite.org:8443"
+    type: vless
+    server: "node-uk.connectsuite.org"
+    port: 8443
+    uuid: "c08f0056-7a6d-4931-813b-aaa3cdd00aed"
+    network: tcp
+    tls: true
+    servername: "node-uk.connectsuite.org"
+    udp: true
+  - name: "de9.pad-sservice.lat:8443"
+    type: vless
+    server: "de9.pad-sservice.lat"
+    port: 8443
+    uuid: "2b0e5676-fb62-4bf0-9607-6e7818421e8e"
+    network: ws
+    tls: true
+    servername: "de9.pad-sservice.lat"
+    ws-opts:
+      path: "/DE9W"
+    udp: true
+  - name: "AT_speednode_0001"
+    type: vless
+    server: "au2.pad-sservice.lat"
+    port: 8443
+    uuid: "2b0e5676-fb62-4bf0-9607-6e7818421e8e"
+    network: ws
+    tls: true
+    servername: "au2.pad-sservice.lat"
+    ws-opts:
+      path: "/A11U"
+    udp: true
+  - name: "freev2.cloudflare.182682.xyz:443"
+    type: vless
+    server: "freev2.cloudflare.182682.xyz"
+    port: 443
+    uuid: "12d32e9b-d41f-4677-aa51-83e21d2837f2"
+    network: ws
+    tls: true
+    servername: "ap-south.862400.xyz"
+    ws-opts:
+      path: "/announcement?ed=2048fp=random"
+    udp: true
+  - name: "🇷🇺 俄罗斯 | RUS 5"
+    type: vless
+    server: "pebble.gerqix.online"
+    port: 443
+    uuid: "80a06811-f74b-4b82-ac99-7e66c2a98e1c"
+    network: grpc
+    tls: true
+    servername: "windlass.gerqix.online"
+    udp: true
+  - name: "'🇺🇸 美国 | USA #4'"
+    type: vless
+    server: "ryanserver.ir"
+    port: 18434
+    uuid: "88888888-8888-8888-8888-888888888888"
+    network: tcp
+    udp: true
+  - name: "devlayer.tech:9443"
+    type: vless
+    server: "devlayer.tech"
+    port: 9443
+    uuid: "0b22812b-4a79-42b1-93ec-5b157b0f2f7f"
+    network: xhttp
+    tls: true
+    servername: "fin.krabvpn.pro"
+    udp: true
+  - name: "www.true.th:80"
+    type: vless
+    server: "www.true.th"
+    port: 80
+    uuid: "f4c5605a-8424-441e-b23d-d6384d012c28"
+    network: ws
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "free-config-bot-development-33s35.lucity"
+    type: vless
+    server: "free-config-bot-development-33s35.lucity.app"
+    port: 443
+    uuid: "474c5a2e-96eb-fa3f-6639-cbd2129c8027"
+    network: ws
+    tls: true
+    servername: "free-config-bot-development-33s35.lucity.app"
+    ws-opts:
+      path: "/ws/474c5a2e-96eb-fa3f-6639-cbd2129c8027"
+    udp: true
+  - name: "cdns.doon.eu.org:443"
+    type: vmess
+    server: "cdns.doon.eu.org"
+    port: 443
+    uuid: "8614bde7-34cf-4413-8360-e96f1b960528"
+    alterId: 0
+    cipher: "auto"
+    network: ws
+    tls: true
+    servername: "consisting-hosted-memphis-tee.trycloudflare.com"
+    ws-opts:
+      path: "/vmess-argo?ed=2560"
+      headers:
+        Host: "consisting-hosted-memphis-tee.trycloudflare.com"
+    udp: true
+  - name: "345739t.de15.h1clayd.click:443"
+    type: vless
+    server: "345739t.de15.h1clayd.click"
+    port: 443
+    uuid: "95c2ba1e-a330-4e6b-bd81-bf9c0f647b2f"
+    network: tcp
+    tls: true
+    servername: "345739t.de15.h1clayd.click"
+    udp: true
+  - name: "lodizu.hagrid-connected.com:443"
+    type: vless
+    server: "lodizu.hagrid-connected.com"
+    port: 443
+    uuid: "beda6bd0-7ce4-477a-91f1-860d018dbfcb"
+    network: tcp
+    tls: true
+    udp: true
+  - name: "美国_1119064300"
+    type: hysteria2
+    server: "s5.libertyrunet.store"
+    port: 443
+    password: "307ee0e53ea04dfd86a7f2f9fcd53844"
+    sni: "s5.libertyrunet.store"
+    udp: true
+  - name: "alireza.karamoz1.ir:443"
+    type: trojan
+    server: "alireza.karamoz1.ir"
+    port: 443
+    password: "poimnap"
+    sni: "alireza.karamoz1.ir"
+    udp: true
+  - name: "free.fugui.lol:62015"
+    type: vless
+    server: "free.fugui.lol"
+    port: 62015
+    uuid: "ead3595f-4020-4e76-a3ec-c248e1a2f2f7"
+    network: tcp
+    tls: true
+    servername: "swdist.apple.com"
+    flow: "xtls-rprx-vision"
+    udp: true
+  - name: "free.fugui.lol:47396"
+    type: vless
+    server: "free.fugui.lol"
+    port: 47396
+    uuid: "ead3595f-4020-4e76-a3ec-c248e1a2f2f7"
+    network: tcp
+    tls: true
+    servername: "swdist.apple.com"
+    flow: "xtls-rprx-vision"
+    udp: true
+  - name: "80cb66x.nl13.h1clayd.click:443"
+    type: vless
+    server: "80cb66x.nl13.h1clayd.click"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    network: xhttp
+    tls: true
+    servername: "80cb66x.nl13.h1clayd.click"
+    udp: true
+  - name: "fc82dfx.nl8.h1clayd.click:443"
+    type: vless
+    server: "fc82dfx.nl8.h1clayd.click"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    network: xhttp
+    tls: true
+    servername: "fc82dfx.nl8.h1clayd.click"
+    udp: true
+  - name: "sub.macdonalder.cyou:56221"
+    type: vless
+    server: "sub.macdonalder.cyou"
+    port: 56221
+    uuid: "4259bc76-37e3-49a6-b958-5913c41a9683"
+    network: tcp
+    tls: true
+    udp: true
+  - name: "gold.jafarghasemiturkk.ir:8080"
+    type: vless
+    server: "gold.jafarghasemiturkk.ir"
+    port: 8080
+    uuid: "4f9f03f9-39e9-4879-8f10-0eccf859aafd"
+    network: ws
+    flow: "xtls-rprx-vision"
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "136.148.208.221:443"
+    type: vless
+    server: "136.148.208.221"
+    port: 443
+    uuid: "4201786b-d99b-4147-a5f0-20d47acddb81"
+    network: tcp
+    tls: true
+    servername: "8a2e72t.nl20.h1clayd.shop"
+    flow: "xtls-rprx-vision"
+    udp: true
+  - name: "196.196.148.85:443"
+    type: vless
+    server: "196.196.148.85"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    network: tcp
+    tls: true
+    servername: "5d0319t.nl7.h1clayd.click"
+    udp: true
+  - name: "84.235.244.108:22573"
+    type: vless
+    server: "84.235.244.108"
+    port: 22573
+    uuid: "39947382-3212-41c9-bc3a-589574ac8b23"
+    network: ws
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "5d0319t.nl7.h1clayd.click:443"
+    type: vless
+    server: "5d0319t.nl7.h1clayd.click"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    network: tcp
+    tls: true
+    servername: "5d0319t.nl7.h1clayd.click"
+    udp: true
+  - name: "8a2e72t.nl20.h1clayd.shop:443"
+    type: vless
+    server: "8a2e72t.nl20.h1clayd.shop"
+    port: 443
+    uuid: "4201786b-d99b-4147-a5f0-20d47acddb81"
+    network: tcp
+    tls: true
+    servername: "8a2e72t.nl20.h1clayd.shop"
+    flow: "xtls-rprx-vision"
+    udp: true
+  - name: "vl-x1.qz10086.top:38011"
+    type: vless
+    server: "vl-x1.qz10086.top"
+    port: 38011
+    uuid: "79fedc87-b0c7-4525-9188-10cb3cb26eb4"
+    network: tcp
+    tls: true
+    servername: "www.apple.com"
+    flow: "xtls-rprx-vision"
+    udp: true
 
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
       - AUTO
+      - "104.17.145.145:2083"
+      - "172.64.79.163:2083"
+      - "'🏳[www.v2nodes.com] vless- #19'"
+      - "'🇺🇸[www.v2nodes.com] vless-US-1... #6'"
+      - "'🇸🇬[www.v2nodes.com] vless-SG-7... #2'"
+      - "'🏳[www.v2nodes.com] vless- #15'"
+      - "🇸🇬[www.v2nodes.com] vless-SG-7..."
+      - "🇯🇵[www.v2nodes.com] vless-JP-1..."
+      - "🇮🇳[www.v2nodes.com] vless-IN-1..."
+      - "🇬🇧[www.v2nodes.com] vless-GB-1..."
+      - "'🇫🇷[www.v2nodes.com] vless-FR-1... #1'"
+      - "🇫🇮[www.v2nodes.com] vless-FI-1..."
+      - "🇨🇦[www.v2nodes.com] vless-CA"
+      - "'🏳[www.v2nodes.com] vless- #14'"
+      - "'🇸🇬[www.v2nodes.com] vless-SG-7... #1'"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
+      - "🇺🇸 美国5|@ripaojiedian"
+      - "🇺🇸 美国|@ripaojiedian"
+      - "216.152.147.74:443"
+      - "216.152.147.79:443"
+      - "216.152.147.93:443"
+      - "216.152.147.152:443"
+      - "192.255.152.147:443"
+      - "162.35.101.177:443"
+      - "192.74.236.148:30004"
+      - "57.129.132.223:80"
+      - "138.124.70.41:14430"
+      - "66.163.127.215:443"
+      - "66.163.127.225:443"
+      - "193.108.119.78:443"
+      - "193.108.119.15:443"
+      - "193.108.119.96:443"
+      - "防失效github+SubCrawler俄罗斯联邦_111906264"
+      - "🇩🇪 DE德国(mibei77.com 米贝节点分享)"
+      - "cf.008500.xyz:443"
+      - "'🏳[www.v2nodes.com] vless- #2'"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-2"
+      - "179.61.138.145:443"
+      - "'🇳🇱[www.v2nodes.com] vless-NL-1... #6'"
+      - "130.49.161.70:443"
+      - "66.163.118.244:443"
+      - "66.163.118.40:443"
+      - "66.163.118.203:443"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-3"
+      - "英国_111906013"
+      - "88.216.60.73:443"
+      - "208.69.78.33:443"
+      - "208.69.78.158:443"
+      - "🇮🇹 意大利(mibei77.com 米贝节点分享)"
+      - "🇮🇹 意大利2|@ripaojiedian"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-4"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-5"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-6"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-7"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-8"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-9"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-10"
+      - "191.217.206.147:8443"
+      - "2.27.14.122:9443"
+      - "191.217.206.147:443"
+      - "191.217.206.147:9443"
+      - "191.217.206.147:6443"
+      - "45.144.234.157:14430"
+      - "2.27.14.122:8443"
+      - "南非_111906020"
+      - "5.178.109.174:14430"
+      - "191.217.206.147:7443"
+      - "瑞典_111906166"
+      - "80.47.10.106:443"
+      - "178.172.227.124:10443"
+      - "216.238.104.154:443"
+      - "'🇸🇪[www.v2nodes.com] vless-SE-1... #2'"
+      - "45.86.60.174:16443"
+      - "31.76.80.69:443"
+      - "48.103.218.241:18443"
+      - "178.172.227.228:14430"
+      - "87.76.154.28:57231"
+      - "'🇸🇪 瑞典 | SWE #3'"
+      - "201.51.12.98:443"
       - DIRECT
+
   - name: AUTO
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
+    lazy: false
     proxies:
-      - "192.255.152.147:443"
-      - "162.35.101.177:443"
       - "104.17.145.145:2083"
       - "172.64.79.163:2083"
-      - "🏳[www.v2nodes.com] vless- #19"
-      - "🇺🇸[www.v2nodes.com] vless-US-1... #6"
-      - "🇸🇬[www.v2nodes.com] vless-SG-7... #2"
-      - "🏳[www.v2nodes.com] vless- #15"
+      - "'🏳[www.v2nodes.com] vless- #19'"
+      - "'🇺🇸[www.v2nodes.com] vless-US-1... #6'"
+      - "'🇸🇬[www.v2nodes.com] vless-SG-7... #2'"
+      - "'🏳[www.v2nodes.com] vless- #15'"
       - "🇸🇬[www.v2nodes.com] vless-SG-7..."
       - "🇯🇵[www.v2nodes.com] vless-JP-1..."
       - "🇮🇳[www.v2nodes.com] vless-IN-1..."
       - "🇬🇧[www.v2nodes.com] vless-GB-1..."
-      - "🇫🇷[www.v2nodes.com] vless-FR-1... #1"
+      - "'🇫🇷[www.v2nodes.com] vless-FR-1... #1'"
       - "🇫🇮[www.v2nodes.com] vless-FI-1..."
       - "🇨🇦[www.v2nodes.com] vless-CA"
-      - "🏳[www.v2nodes.com] vless- #14"
-      - "🇸🇬[www.v2nodes.com] vless-SG-7... #1"
+      - "'🏳[www.v2nodes.com] vless- #14'"
+      - "'🇸🇬[www.v2nodes.com] vless-SG-7... #1'"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
       - "🇺🇸 美国5|@ripaojiedian"
       - "🇺🇸 美国|@ripaojiedian"
-      - "192.74.236.148:30004"
-      - "🇲🇽[www.v2nodes.com] ss-MX-1564..."
-      - "216.152.147.152:443"
+      - "216.152.147.74:443"
       - "216.152.147.79:443"
       - "216.152.147.93:443"
-      - "216.152.147.74:443"
-      - "🇨🇦[www.v2nodes.com] ss-CA-1559... #1"
-      - "🏳[www.v2nodes.com] ss- #1"
-      - "🇨🇦[www.v2nodes.com] ss-CA-1545..."
-      - "🇨🇦[www.v2nodes.com] ss-CA-1557..."
-      - "🇨🇦[www.v2nodes.com] ss-CA-1546..."
-      - "🇨🇦[www.v2nodes.com] ss-CA-1538..."
-      - "🇨🇦[www.v2nodes.com] ss-CA-1559..."
-      - "🏳[www.v2nodes.com] ss-"
-      - "🇸🇬 SG新加坡(mibei77.com 米贝节点分享)"
-      - "🇨🇦[www.v2nodes.com] ss-CA-1558..."
-      - "🏳[www.v2nodes.com] ss- #12"
-      - "🇯🇵[www.v2nodes.com] ss-JP-5141..."
-      - "🇯🇵[www.v2nodes.com] ss-JP-1291..."
-      - "🇲🇾[www.v2nodes.com] vless-MY-1..."
-      - "🇯🇵[www.v2nodes.com] ss-JP-1544..."
-      - "cf.008500.xyz:443"
-      - "158.247.253.243:443"
-      - "🇬🇧[www.v2nodes.com] ss-GB-1602..."
-      - "🇬🇧[www.v2nodes.com] ss-GB-1615... #1"
-      - "🇬🇧[www.v2nodes.com] ss-GB-1247..."
-      - "🇬🇧[www.v2nodes.com] ss-GB-1615..."
+      - "216.152.147.152:443"
+      - "192.255.152.147:443"
+      - "162.35.101.177:443"
+      - "192.74.236.148:30004"
       - "57.129.132.223:80"
-      - "🏳[www.v2nodes.com] ss- #9"
-      - "🇬🇧[www.v2nodes.com] ss-GB-1621..."
-      - "🏳[www.v2nodes.com] ss- #8"
-      - "🇬🇧[www.v2nodes.com] ss-GB-1451..."
-      - "45.63.30.142:443"
-      - "🏳[www.v2nodes.com] ss- #10"
       - "138.124.70.41:14430"
-      - "🇹🇼[www.v2nodes.com] vless-TW-1..."
-      - "🇯🇵 日本2|@ripaojiedian"
-      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-2"
-      - "🇫🇷[www.v2nodes.com] ss-FR-1615... #2"
-      - "🏳[www.v2nodes.com] ss- #7"
-      - "🇳🇱[www.v2nodes.com] ss-NL-1614... #1"
-      - "🇺🇸[www.v2nodes.com] ss-US-1620..."
       - "66.163.127.215:443"
-      - "🇳🇱[www.v2nodes.com] ss-NL-1614..."
-      - "193.108.119.96:443"
-      - "sclass-b1.catcat321.com:20027"
-      - "🏳[www.v2nodes.com] ss- #4"
-      - "🇩🇪[www.v2nodes.com] ss-DE-1615..."
+      - "66.163.127.225:443"
       - "193.108.119.78:443"
       - "193.108.119.15:443"
-      - "🇫🇷[www.v2nodes.com] ss-FR-1615..."
-      - "🇫🇷[www.v2nodes.com] ss-FR-1616..."
-      - "🏳[www.v2nodes.com] vless- #2"
-      - "🇳🇱[www.v2nodes.com] ss-NL-1618..."
-      - "🇳🇱[www.v2nodes.com] vless-NL-1... #6"
+      - "193.108.119.96:443"
+      - "防失效github+SubCrawler俄罗斯联邦_111906264"
+      - "🇩🇪 DE德国(mibei77.com 米贝节点分享)"
+      - "cf.008500.xyz:443"
+      - "'🏳[www.v2nodes.com] vless- #2'"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-2"
+      - "179.61.138.145:443"
+      - "'🇳🇱[www.v2nodes.com] vless-NL-1... #6'"
       - "130.49.161.70:443"
-      - "🇫🇷[www.v2nodes.com] ss-FR-1615... #1"
-      - "🇩🇪[www.v2nodes.com] ss-DE-1623..."
-      - "66.163.127.225:443"
+      - "66.163.118.244:443"
+      - "66.163.118.40:443"
+      - "66.163.118.203:443"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)-3"
       - "英国_111906013"
-      - "🇩🇪 DE德国(mibei77.com 米贝节点分享)"
-      - "防失效github+SubCrawler俄罗斯联邦_111906264"
-      - "179.61.138.145:443"
-      - "🇩🇪[www.v2nodes.com] ss-DE-1615... #1"
-      - "🏳[www.v2nodes.com] ss- #6"
-      - "🇩🇪 德国 | DEU #2"
-      - "🇳🇴[www.v2nodes.com] ss-NO-1220..."
-      - "🇫🇷 法国 | FRA #1"
-      - "南非_111906020"
-      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-4"
-      - "🇮🇹 意大利2|@ripaojiedian"
+      - "88.216.60.73:443"
       - "208.69.78.33:443"
+      - "208.69.78.158:443"
+      - "🇮🇹 意大利(mibei77.com 米贝节点分享)"
+      - "🇮🇹 意大利2|@ripaojiedian"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-4"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)-5"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)-6"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)-7"
-      - "🏳[www.v2nodes.com] ss- #2"
-      - "🇪🇸[www.v2nodes.com] ss-ES-1615..."
-      - "66.163.118.244:443"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)-8"
-      - "🏳[www.v2nodes.com] ss- #5"
-      - "66.163.118.203:443"
-      - "66.163.118.40:443"
-      - "🇮🇹 意大利(mibei77.com 米贝节点分享)"
-      - "🇫🇮[www.v2nodes.com] ss-FI-1621..."
-      - "🏳[www.v2nodes.com] ss- #3"
-      - "意大利|@ripaojiedian"
-      - "2.27.14.122:8443"
-      - "88.216.60.73:443"
-      - "2.27.14.122:9443"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-9"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-10"
       - "191.217.206.147:8443"
-      - "🇦🇹[www.v2nodes.com] ss-AT-1595..."
-      - "191.217.206.147:7443"
+      - "2.27.14.122:9443"
+      - "191.217.206.147:443"
+      - "191.217.206.147:9443"
       - "191.217.206.147:6443"
-      - "🇮🇹[www.v2nodes.com] ss-IT-1597..."
-      - "🇨🇭[www.v2nodes.com] ss-CH-1616..."
-      - "🇦🇹[www.v2nodes.com] ss-AT-1614..."
+      - "45.144.234.157:14430"
+      - "2.27.14.122:8443"
+      - "南非_111906020"
+      - "5.178.109.174:14430"
+      - "191.217.206.147:7443"
+      - "瑞典_111906166"
+      - "80.47.10.106:443"
+      - "178.172.227.124:10443"
+      - "216.238.104.154:443"
+      - "'🇸🇪[www.v2nodes.com] vless-SE-1... #2'"
+      - "45.86.60.174:16443"
+      - "31.76.80.69:443"
+      - "48.103.218.241:18443"
+      - "178.172.227.228:14430"
+      - "87.76.154.28:57231"
+      - "'🇸🇪 瑞典 | SWE #3'"
+      - "201.51.12.98:443"
+      - "201.34.142.108:443"
+      - "🇷🇺 俄罗斯 | RUS 3"
+      - "'🇩🇪 德国 | DEU #5'"
+      - "196.245.52.183:443"
+      - "'🇳🇱[www.v2nodes.com] vless-NL-1... #5'"
+      - "'🇳🇱 荷兰 | NLD #4'"
+      - "🇸🇬 SG新加坡(mibei77.com 米贝节点分享)"
+      - "'🇷🇺[www.v2nodes.com] vless-RU-1... #1'"
+      - "'🇩🇪[www.v2nodes.com] vless-DE-1... #5'"
+      - "🇲🇾[www.v2nodes.com] vless-MY-1..."
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-11"
+      - "196.196.148.63:443"
+      - "95.174.68.188:14430"
+      - "158.247.253.243:443"
+      - "5.129.202.80:443"
+      - "45.63.30.142:443"
+      - "🇹🇼[www.v2nodes.com] vless-TW-1..."
+      - "47.242.93.89:12012"
+      - "152.69.226.63:25555"
+      - "ov-france1.09vpn.com:80"
+      - "'🇸🇬[www.v2nodes.com] vless-SG-1... #3'"
+      - "47.250.84.25:443"
+      - "'🇸🇬[www.v2nodes.com] vless-SG-1... #2'"
+      - "13.141.51.2:443"
+      - "150.95.109.109:2086"
       - "assets.opensignal.com:80"
-      - "🏳[www.v2nodes.com] ss- #13"
+      - "196.245.52.187:443"
+      - "13.140.56.100:14430"
+      - "🇸🇬[www.v2nodes.com] vless-SG-8..."
+      - "cf.090227.xyz:443"
+      - "'🇩🇪[www.v2nodes.com] vless-DE-1... #3'"
+      - "'🇵🇱[www.v2nodes.com] vless-PL-1... #4'"
+      - "15.235.184.127:443"
+      - "🇯🇵 日本2|@ripaojiedian"
+      - "'🇺🇸 美国 | USA #5'"
+      - "🇫🇷 FR法国(mibei77.com 米贝节点分享)"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-12"
+      - "🇯🇵 日本 V2CROSS.COM"
+      - "sclass-b1.catcat321.com:20027"
+      - "'🏳[www.v2nodes.com] vless- #6'"
 
 rules:
   - GEOIP,CN,DIRECT
