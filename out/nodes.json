@@ -1,1184 +1,248 @@
 {
- "generated_at": "2026-11-19T05:04:35Z",
+ "generated_at": "2026-11-19T05:12:05Z",
  "meta": {
   "total_parsed": 200,
-  "alive": 146,
-  "alive_rate": 73.0,
-  "probe_ms": 2518,
+  "alive": 29,
+  "alive_rate": 14.5,
+  "probe_ms": 2511,
   "min_speed_mbps": 0.1,
-  "speed_tested": 0,
-  "elapsed_ms": 27617,
+  "speed_tested": 29,
+  "elapsed_ms": 57144,
   "tls": {}
  },
- "count": 146,
+ "count": 29,
  "nodes": [
-  {
-   "scheme": "vless",
-   "host": "104.17.145.145",
-   "port": 2083,
-   "name": "",
-   "latency_ms": 8.3,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "172.64.79.163",
-   "port": 2083,
-   "name": "",
-   "latency_ms": 11.2,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "199.232.78.159",
-   "port": 443,
-   "name": "'🏳[www.v2nodes.com] vless- #19'",
-   "latency_ms": 11.4,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "199.232.78.160",
-   "port": 443,
-   "name": "'🇺🇸[www.v2nodes.com] vless-US-1... #6'",
-   "latency_ms": 11.5,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "104.18.109.147",
-   "port": 2052,
-   "name": "'🇸🇬[www.v2nodes.com] vless-SG-7... #2'",
-   "latency_ms": 11.8,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "172.67.131.125",
-   "port": 2083,
-   "name": "'🏳[www.v2nodes.com] vless- #15'",
-   "latency_ms": 11.8,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "141.193.213.10",
-   "port": 443,
-   "name": "🇸🇬[www.v2nodes.com] vless-SG-7...",
-   "latency_ms": 11.9,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "104.16.10.9",
-   "port": 443,
-   "name": "🇯🇵[www.v2nodes.com] vless-JP-1...",
-   "latency_ms": 12.7,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "188.114.99.137",
-   "port": 443,
-   "name": "🇮🇳[www.v2nodes.com] vless-IN-1...",
-   "latency_ms": 12.9,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "88.216.67.54",
-   "port": 443,
-   "name": "🇬🇧[www.v2nodes.com] vless-GB-1...",
-   "latency_ms": 13.2,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "199.232.78.120",
-   "port": 443,
-   "name": "'🇫🇷[www.v2nodes.com] vless-FR-1... #1'",
-   "latency_ms": 13.3,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "198.202.24.142",
-   "port": 2083,
-   "name": "🇫🇮[www.v2nodes.com] vless-FI-1...",
-   "latency_ms": 13.5,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "27.50.48.6",
-   "port": 443,
-   "name": "🇨🇦[www.v2nodes.com] vless-CA",
-   "latency_ms": 13.5,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "104.26.13.31",
-   "port": 8080,
-   "name": "'🏳[www.v2nodes.com] vless- #14'",
-   "latency_ms": 13.9,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "188.114.98.0",
-   "port": 443,
-   "name": "'🇸🇬[www.v2nodes.com] vless-SG-7... #1'",
-   "latency_ms": 14.0,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "199.232.249.131",
-   "port": 443,
-   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 15.7,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "104.16.148.5",
-   "port": 443,
-   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 16.1,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "151.101.110.219",
-   "port": 443,
-   "name": "🇺🇸 美国5|@ripaojiedian",
-   "latency_ms": 17.7,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "167.82.76.27",
-   "port": 443,
-   "name": "🇺🇸 美国|@ripaojiedian",
-   "latency_ms": 17.8,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "216.152.147.74",
-   "port": 443,
-   "name": "",
-   "latency_ms": 24.3,
-   "speed_mbps": null
-  },
   {
    "scheme": "trojan",
    "host": "216.152.147.79",
    "port": 443,
    "name": "",
-   "latency_ms": 26.0,
-   "speed_mbps": 0.0
+   "latency_ms": 27.1,
+   "speed_mbps": 24.317
   },
   {
    "scheme": "trojan",
    "host": "216.152.147.93",
    "port": 443,
    "name": "",
-   "latency_ms": 26.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "trojan",
-   "host": "216.152.147.152",
-   "port": 443,
-   "name": "",
-   "latency_ms": 27.0,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "hysteria2",
-   "host": "192.255.152.147",
-   "port": 443,
-   "name": "",
-   "latency_ms": 61.3,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "162.35.101.177",
-   "port": 443,
-   "name": "",
-   "latency_ms": 66.7,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vmess",
-   "host": "192.74.236.148",
-   "port": 30004,
-   "name": "",
-   "latency_ms": 78.4,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "57.129.132.223",
-   "port": 80,
-   "name": "",
-   "latency_ms": 81.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "138.124.70.41",
-   "port": 14430,
-   "name": "",
-   "latency_ms": 82.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "trojan",
-   "host": "66.163.127.215",
-   "port": 443,
-   "name": "",
-   "latency_ms": 86.5,
-   "speed_mbps": null
+   "latency_ms": 25.2,
+   "speed_mbps": 20.922
   },
   {
    "scheme": "trojan",
    "host": "66.163.127.225",
    "port": 443,
    "name": "",
-   "latency_ms": 88.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "trojan",
-   "host": "193.108.119.78",
-   "port": 443,
-   "name": "",
-   "latency_ms": 88.6,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "193.108.119.15",
-   "port": 443,
-   "name": "",
-   "latency_ms": 90.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "trojan",
-   "host": "193.108.119.96",
-   "port": 443,
-   "name": "",
-   "latency_ms": 89.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "hysteria2",
-   "host": "95.140.147.245",
-   "port": 443,
-   "name": "防失效github+SubCrawler俄罗斯联邦_111906264",
-   "latency_ms": 89.2,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "ss",
-   "host": "47.254.169.3",
-   "port": 443,
-   "name": "🇩🇪 DE德国(mibei77.com 米贝节点分享)",
-   "latency_ms": 133.0,
-   "speed_mbps": 0.0
+   "latency_ms": 88.4,
+   "speed_mbps": 7.585
   },
   {
    "scheme": "vless",
-   "host": "cf.008500.xyz",
-   "port": 443,
+   "host": "138.124.70.41",
+   "port": 14430,
    "name": "",
-   "latency_ms": 89.4,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "5.83.129.236",
-   "port": 443,
-   "name": "'🏳[www.v2nodes.com] vless- #2'",
-   "latency_ms": 89.9,
-   "speed_mbps": null
+   "latency_ms": 81.3,
+   "speed_mbps": 7.552
   },
   {
    "scheme": "ss",
    "host": "47.254.143.251",
    "port": 443,
    "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 100.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "hysteria2",
-   "host": "179.61.138.145",
-   "port": 443,
-   "name": "",
-   "latency_ms": 92.5,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "194.60.228.97",
-   "port": 443,
-   "name": "'🇳🇱[www.v2nodes.com] vless-NL-1... #6'",
-   "latency_ms": 150.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "hysteria2",
-   "host": "130.49.161.70",
-   "port": 443,
-   "name": "",
-   "latency_ms": 93.5,
-   "speed_mbps": null
+   "latency_ms": 90.5,
+   "speed_mbps": 7.495
   },
   {
    "scheme": "trojan",
-   "host": "66.163.118.244",
+   "host": "193.108.119.96",
    "port": 443,
    "name": "",
-   "latency_ms": 97.1,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "66.163.118.40",
-   "port": 443,
-   "name": "",
-   "latency_ms": 97.4,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "66.163.118.203",
-   "port": 443,
-   "name": "",
-   "latency_ms": 97.5,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "sclass-c2.catcat321.com",
-   "port": 20051,
-   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 99.0,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "hysteria2",
-   "host": "31.76.106.92",
-   "port": 8443,
-   "name": "英国_111906013",
-   "latency_ms": 100.0,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "88.216.60.73",
-   "port": 443,
-   "name": "",
-   "latency_ms": 100.3,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "208.69.78.33",
-   "port": 443,
-   "name": "",
-   "latency_ms": 119.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "trojan",
-   "host": "208.69.78.158",
-   "port": 443,
-   "name": "",
-   "latency_ms": 101.3,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "ss",
-   "host": "202.50.253.81",
-   "port": 19999,
-   "name": "🇮🇹 意大利(mibei77.com 米贝节点分享)",
-   "latency_ms": 213.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "ss",
-   "host": "202.50.253.27",
-   "port": 19999,
-   "name": "🇮🇹 意大利2|@ripaojiedian",
-   "latency_ms": 221.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "ss",
-   "host": "202.50.253.90",
-   "port": 19999,
-   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 208.0,
-   "speed_mbps": 0.0
+   "latency_ms": 88.7,
+   "speed_mbps": 7.408
   },
   {
    "scheme": "ss",
    "host": "202.50.253.18",
    "port": 19999,
    "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 209.0,
-   "speed_mbps": 0.0
+   "latency_ms": 103.8,
+   "speed_mbps": 6.738
   },
   {
    "scheme": "ss",
-   "host": "202.50.253.54",
+   "host": "202.50.253.27",
    "port": 19999,
-   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 208.0,
-   "speed_mbps": 0.0
+   "name": "🇮🇹 意大利2|@ripaojiedian",
+   "latency_ms": 103.1,
+   "speed_mbps": 6.727
   },
   {
    "scheme": "ss",
-   "host": "202.50.253.45",
+   "host": "202.50.253.90",
    "port": 19999,
    "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 208.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "ss",
-   "host": "202.50.253.36",
-   "port": 19999,
-   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 209.0,
-   "speed_mbps": 0.0
+   "latency_ms": 105.4,
+   "speed_mbps": 6.725
   },
   {
    "scheme": "ss",
    "host": "202.50.253.72",
    "port": 19999,
    "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 209.0,
-   "speed_mbps": 0.0
+   "latency_ms": 105.0,
+   "speed_mbps": 6.712
+  },
+  {
+   "scheme": "ss",
+   "host": "202.50.253.36",
+   "port": 19999,
+   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
+   "latency_ms": 103.0,
+   "speed_mbps": 6.689
   },
   {
    "scheme": "ss",
    "host": "202.50.253.99",
    "port": 19999,
    "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 216.0,
-   "speed_mbps": 0.0
+   "latency_ms": 104.0,
+   "speed_mbps": 6.688
   },
   {
-   "scheme": "vless",
-   "host": "191.217.206.147",
-   "port": 8443,
-   "name": "",
+   "scheme": "ss",
+   "host": "202.50.253.81",
+   "port": 19999,
+   "name": "🇮🇹 意大利(mibei77.com 米贝节点分享)",
    "latency_ms": 103.3,
-   "speed_mbps": null
+   "speed_mbps": 6.686
   },
   {
-   "scheme": "vless",
-   "host": "2.27.14.122",
-   "port": 9443,
-   "name": "",
-   "latency_ms": 103.5,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "191.217.206.147",
-   "port": 443,
-   "name": "",
-   "latency_ms": 103.7,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "191.217.206.147",
-   "port": 9443,
-   "name": "",
-   "latency_ms": 103.8,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "191.217.206.147",
-   "port": 6443,
-   "name": "",
+   "scheme": "ss",
+   "host": "202.50.253.45",
+   "port": 19999,
+   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
    "latency_ms": 103.9,
-   "speed_mbps": null
+   "speed_mbps": 6.649
+  },
+  {
+   "scheme": "ss",
+   "host": "202.50.253.54",
+   "port": 19999,
+   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
+   "latency_ms": 107.3,
+   "speed_mbps": 6.503
+  },
+  {
+   "scheme": "ss",
+   "host": "47.254.169.3",
+   "port": 443,
+   "name": "🇩🇪 DE德国(mibei77.com 米贝节点分享)",
+   "latency_ms": 90.5,
+   "speed_mbps": 6.431
   },
   {
    "scheme": "vless",
    "host": "45.144.234.157",
    "port": 14430,
    "name": "",
-   "latency_ms": 121.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "2.27.14.122",
-   "port": 8443,
-   "name": "",
-   "latency_ms": 106.3,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "hysteria2",
-   "host": "192.142.23.46",
-   "port": 443,
-   "name": "南非_111906020",
-   "latency_ms": 106.5,
-   "speed_mbps": null
+   "latency_ms": 107.8,
+   "speed_mbps": 5.949
   },
   {
    "scheme": "vless",
    "host": "5.178.109.174",
    "port": 14430,
    "name": "",
-   "latency_ms": 111.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "191.217.206.147",
-   "port": 7443,
-   "name": "",
-   "latency_ms": 106.8,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "hysteria2",
-   "host": "95.143.196.97",
-   "port": 443,
-   "name": "瑞典_111906166",
-   "latency_ms": 122.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "80.47.10.106",
-   "port": 443,
-   "name": "",
-   "latency_ms": 110.2,
-   "speed_mbps": null
+   "latency_ms": 114.8,
+   "speed_mbps": 5.481
   },
   {
    "scheme": "vless",
    "host": "178.172.227.124",
    "port": 10443,
    "name": "",
-   "latency_ms": 124.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "trojan",
-   "host": "216.238.104.154",
-   "port": 443,
-   "name": "",
-   "latency_ms": 113.1,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "138.124.86.230",
-   "port": 48115,
-   "name": "'🇸🇪[www.v2nodes.com] vless-SE-1... #2'",
-   "latency_ms": 113.2,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "45.86.60.174",
-   "port": 16443,
-   "name": "",
-   "latency_ms": 114.9,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "hysteria2",
-   "host": "31.76.80.69",
-   "port": 443,
-   "name": "",
-   "latency_ms": 115.9,
-   "speed_mbps": null
+   "latency_ms": 110.1,
+   "speed_mbps": 5.273
   },
   {
    "scheme": "ss",
    "host": "48.103.218.241",
    "port": 18443,
    "name": "",
-   "latency_ms": 137.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "178.172.227.228",
-   "port": 14430,
-   "name": "",
-   "latency_ms": 154.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "87.76.154.28",
-   "port": 57231,
-   "name": "",
-   "latency_ms": 120.0,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "87.242.94.43",
-   "port": 443,
-   "name": "'🇸🇪 瑞典 | SWE #3'",
-   "latency_ms": 124.8,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "201.51.12.98",
-   "port": 443,
-   "name": "",
-   "latency_ms": 127.0,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "201.34.142.108",
-   "port": 443,
-   "name": "",
-   "latency_ms": 127.1,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "201.24.116.192",
-   "port": 443,
-   "name": "🇷🇺 俄罗斯 | RUS 3",
-   "latency_ms": 127.6,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "193.160.208.240",
-   "port": 443,
-   "name": "'🇩🇪 德国 | DEU #5'",
-   "latency_ms": 131.3,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "196.245.52.183",
-   "port": 443,
-   "name": "",
-   "latency_ms": 134.1,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "31.177.111.134",
-   "port": 443,
-   "name": "'🇳🇱[www.v2nodes.com] vless-NL-1... #5'",
-   "latency_ms": 134.9,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "87.242.94.42",
-   "port": 443,
-   "name": "'🇳🇱 荷兰 | NLD #4'",
-   "latency_ms": 135.6,
-   "speed_mbps": null
+   "latency_ms": 118.5,
+   "speed_mbps": 4.331
   },
   {
    "scheme": "trojan",
-   "host": "sclass-01.catcat321.com",
-   "port": 20103,
-   "name": "🇸🇬 SG新加坡(mibei77.com 米贝节点分享)",
-   "latency_ms": 135.7,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "201.24.121.243",
-   "port": 443,
-   "name": "'🇷🇺[www.v2nodes.com] vless-RU-1... #1'",
-   "latency_ms": 135.8,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "37.18.14.177",
-   "port": 443,
-   "name": "'🇩🇪[www.v2nodes.com] vless-DE-1... #5'",
-   "latency_ms": 135.9,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "382218.xyz",
-   "port": 443,
-   "name": "🇲🇾[www.v2nodes.com] vless-MY-1...",
-   "latency_ms": 155.3,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "sclass-b1.catcat321.com",
-   "port": 20051,
-   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 474.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "196.196.148.63",
+   "host": "193.108.119.15",
    "port": 443,
    "name": "",
-   "latency_ms": 164.1,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "95.174.68.188",
-   "port": 14430,
-   "name": "",
-   "latency_ms": 207.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "trojan",
-   "host": "158.247.253.243",
-   "port": 443,
-   "name": "",
-   "latency_ms": 208.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "5.129.202.80",
-   "port": 443,
-   "name": "",
-   "latency_ms": 181.2,
-   "speed_mbps": null
+   "latency_ms": 88.7,
+   "speed_mbps": 3.771
   },
   {
    "scheme": "trojan",
    "host": "45.63.30.142",
    "port": 443,
    "name": "",
-   "latency_ms": 186.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "60.248.219.53",
-   "port": 443,
-   "name": "🇹🇼[www.v2nodes.com] vless-TW-1...",
-   "latency_ms": 197.6,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "47.242.93.89",
-   "port": 12012,
-   "name": "",
-   "latency_ms": 605.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "152.69.226.63",
-   "port": 25555,
-   "name": "",
-   "latency_ms": 217.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "ov-france1.09vpn.com",
-   "port": 80,
-   "name": "",
-   "latency_ms": 91.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "139.162.27.96",
-   "port": 2096,
-   "name": "'🇸🇬[www.v2nodes.com] vless-SG-1... #3'",
-   "latency_ms": 220.8,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "47.250.84.25",
-   "port": 443,
-   "name": "",
-   "latency_ms": 224.2,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "207.148.124.12",
-   "port": 8443,
-   "name": "'🇸🇬[www.v2nodes.com] vless-SG-1... #2'",
-   "latency_ms": 224.2,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "13.141.51.2",
-   "port": 443,
-   "name": "",
-   "latency_ms": 244.5,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "150.95.109.109",
-   "port": 2086,
-   "name": "",
-   "latency_ms": 269.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "assets.opensignal.com",
-   "port": 80,
-   "name": "",
-   "latency_ms": 252.4,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "196.245.52.187",
-   "port": 443,
-   "name": "",
-   "latency_ms": 264.3,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "13.140.56.100",
-   "port": 14430,
-   "name": "",
-   "latency_ms": 392.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "cf.090227.xyz",
-   "port": 8443,
-   "name": "🇸🇬[www.v2nodes.com] vless-SG-8...",
-   "latency_ms": 268.6,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vmess",
-   "host": "cf.090227.xyz",
-   "port": 443,
-   "name": "",
-   "latency_ms": 272.2,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "ir2.cryptojakiro.com",
-   "port": 443,
-   "name": "'🇩🇪[www.v2nodes.com] vless-DE-1... #3'",
-   "latency_ms": 280.1,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "r0xnfzk9ud.newwl.pro",
-   "port": 443,
-   "name": "'🇵🇱[www.v2nodes.com] vless-PL-1... #4'",
-   "latency_ms": 298.9,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "15.235.184.127",
-   "port": 443,
-   "name": "",
-   "latency_ms": 1286.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "trojan",
-   "host": "v2jp.k1.ssnss.live",
-   "port": 44184,
-   "name": "🇯🇵 日本2|@ripaojiedian",
-   "latency_ms": 460.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "sparkling-gadabout.quick-cdn.net",
-   "port": 443,
-   "name": "'🇺🇸 美国 | USA #5'",
-   "latency_ms": 326.2,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "sclass-00.catcat321.com",
-   "port": 20123,
-   "name": "🇫🇷 FR法国(mibei77.com 米贝节点分享)",
-   "latency_ms": 338.9,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "sclass-00.catcat321.com",
-   "port": 20103,
-   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 340.5,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "sclass-c1.catcat321.com",
-   "port": 20086,
-   "name": "🇯🇵 日本 V2CROSS.COM",
-   "latency_ms": 348.4,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "sclass-b1.catcat321.com",
-   "port": 20027,
-   "name": "",
-   "latency_ms": 352.1,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "3h-kazakhstan1.09vpn.com",
-   "port": 8443,
-   "name": "'🏳[www.v2nodes.com] vless- #6'",
-   "latency_ms": 345.0,
-   "speed_mbps": 0.0
-  },
-  {
-   "scheme": "vless",
-   "host": "node-uk.connectsuite.org",
-   "port": 8443,
-   "name": "",
-   "latency_ms": 386.4,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "de9.pad-sservice.lat",
-   "port": 8443,
-   "name": "",
-   "latency_ms": 394.3,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "au2.pad-sservice.lat",
-   "port": 8443,
-   "name": "AT_speednode_0001",
-   "latency_ms": 398.6,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "freev2.cloudflare.182682.xyz",
-   "port": 443,
-   "name": "",
-   "latency_ms": 407.0,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "pebble.gerqix.online",
-   "port": 443,
-   "name": "🇷🇺 俄罗斯 | RUS 5",
-   "latency_ms": 424.0,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "ryanserver.ir",
-   "port": 18434,
-   "name": "'🇺🇸 美国 | USA #4'",
-   "latency_ms": 428.0,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "devlayer.tech",
-   "port": 9443,
-   "name": "",
-   "latency_ms": 436.6,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "www.true.th",
-   "port": 80,
-   "name": "",
-   "latency_ms": 445.3,
-   "speed_mbps": null
+   "latency_ms": 186.3,
+   "speed_mbps": 3.575
   },
   {
    "scheme": "vless",
    "host": "free-config-bot-development-33s35.lucity.app",
    "port": 443,
    "name": "",
-   "latency_ms": 482.9,
-   "speed_mbps": null
+   "latency_ms": 634.2,
+   "speed_mbps": 2.805
   },
   {
-   "scheme": "vmess",
-   "host": "cdns.doon.eu.org",
+   "scheme": "vless",
+   "host": "178.172.227.228",
+   "port": 14430,
+   "name": "",
+   "latency_ms": 114.3,
+   "speed_mbps": 1.817
+  },
+  {
+   "scheme": "vless",
+   "host": "13.140.56.100",
+   "port": 14430,
+   "name": "",
+   "latency_ms": 216.6,
+   "speed_mbps": 1.491
+  },
+  {
+   "scheme": "vless",
+   "host": "194.60.228.97",
    "port": 443,
-   "name": "",
-   "latency_ms": 499.5,
-   "speed_mbps": null
+   "name": "'🇳🇱[www.v2nodes.com] vless-NL-1... #6'",
+   "latency_ms": 93.4,
+   "speed_mbps": 1.138
   },
   {
    "scheme": "vless",
-   "host": "345739t.de15.h1clayd.click",
-   "port": 443,
+   "host": "87.76.154.28",
+   "port": 57231,
    "name": "",
-   "latency_ms": 523.9,
-   "speed_mbps": null
+   "latency_ms": 120.7,
+   "speed_mbps": 0.743
   },
   {
    "scheme": "vless",
-   "host": "lodizu.hagrid-connected.com",
-   "port": 443,
+   "host": "ov-france1.09vpn.com",
+   "port": 80,
    "name": "",
-   "latency_ms": 582.4,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "hysteria2",
-   "host": "s5.libertyrunet.store",
-   "port": 443,
-   "name": "美国_1119064300",
-   "latency_ms": 582.8,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "trojan",
-   "host": "alireza.karamoz1.ir",
-   "port": 443,
-   "name": "",
-   "latency_ms": 123.0,
-   "speed_mbps": 0.0
+   "latency_ms": 228.3,
+   "speed_mbps": 0.656
   },
   {
    "scheme": "vless",
-   "host": "free.fugui.lol",
-   "port": 62015,
-   "name": "",
-   "latency_ms": 621.0,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "free.fugui.lol",
-   "port": 47396,
-   "name": "",
-   "latency_ms": 621.5,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "80cb66x.nl13.h1clayd.click",
-   "port": 443,
-   "name": "",
-   "latency_ms": 633.4,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "fc82dfx.nl8.h1clayd.click",
-   "port": 443,
-   "name": "",
-   "latency_ms": 640.4,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "sub.macdonalder.cyou",
-   "port": 56221,
-   "name": "",
-   "latency_ms": 679.8,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "gold.jafarghasemiturkk.ir",
-   "port": 8080,
-   "name": "",
-   "latency_ms": 858.0,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "136.148.208.221",
-   "port": 443,
-   "name": "",
-   "latency_ms": 1160.7,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "196.196.148.85",
-   "port": 443,
-   "name": "",
-   "latency_ms": 1199.5,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "84.235.244.108",
-   "port": 22573,
-   "name": "",
-   "latency_ms": 1208.3,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "5d0319t.nl7.h1clayd.click",
-   "port": 443,
-   "name": "",
-   "latency_ms": 1455.7,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "8a2e72t.nl20.h1clayd.shop",
-   "port": 443,
-   "name": "",
-   "latency_ms": 1578.5,
-   "speed_mbps": null
-  },
-  {
-   "scheme": "vless",
-   "host": "vl-x1.qz10086.top",
-   "port": 38011,
-   "name": "",
-   "latency_ms": 1758.6,
-   "speed_mbps": null
+   "host": "3h-kazakhstan1.09vpn.com",
+   "port": 8443,
+   "name": "'🏳[www.v2nodes.com] vless- #6'",
+   "latency_ms": 403.7,
+   "speed_mbps": 0.151
   }
  ]
 }
