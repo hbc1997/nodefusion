@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+out_test/
+out_fast/
+_patch*.py
+test_http.exe
+src/
+.vscode/
+.idea/
