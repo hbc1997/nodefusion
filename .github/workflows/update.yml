@@ -4,41 +4,56 @@ on:
   schedule:
     - cron: "17 */6 * * *"
   workflow_dispatch:
+    inputs:
+      min_speed:
+        description: "最低下载速度 (MB/s)"
+        required: false
+        default: "0.1"
+      no_speedtest:
+        description: "跳过测速"
+        type: boolean
+        required: false
+        default: false
   push:
     branches: [ main ]
+    paths:
+      - "aggregator.py"
+      - ".github/workflows/update.yml"
 
 permissions:
   contents: write
 
 concurrency:
   group: update-nodes
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Aggregate and probe
+      - name: Aggregate, probe, speed test
         env:
           PYTHONUNBUFFERED: "1"
+          MIN_SPEED: ${{ github.event.inputs.min_speed || '0.1' }}
+          NO_SPEEDTEST: ${{ github.event.inputs.no_speedtest || 'false' }}
         run: |
-          python aggregator.py \
-            --outdir out \
-            --concurrency 4096 \
-            --timeout 2.5 \
-            --tls-timeout 3.0 \
-            --no-tls \
-            --min-alive 20
+          ARGS="--outdir out --concurrency 4096 --timeout 2.5 --min-alive 10 --min-speed $MIN_SPEED"
+          if [ "$NO_SPEEDTEST" = "true" ]; then
+            ARGS="$ARGS --no-speedtest"
+          fi
+          python aggregator.py $ARGS
 
       - name: Show summary
         if: always()
@@ -47,17 +62,22 @@ jobs:
           if [ -f out/nodes.json ]; then
             python - <<'PY' >> $GITHUB_STEP_SUMMARY
           import json
+          from collections import Counter
           d = json.load(open("out/nodes.json", encoding="utf-8"))
           m = d["meta"]
-          print(f"- parsed: **{m['total_parsed']}**")
-          print(f"- alive: **{m['alive']}** ({m['alive_rate']}%)")
+          print(f"- parsed : **{m['total_parsed']}**")
+          print(f"- alive  : **{m['alive']}** ({m['alive_rate']}%)")
+          print(f"- speed  : tested **{m.get('speed_tested',0)}** @ >= {m.get('min_speed_mbps')} MB/s")
           print(f"- elapsed: {m['elapsed_ms']} ms")
           print("")
           print("| scheme | count |")
           print("|---|---|")
-          from collections import Counter
           for k, v in Counter(n["scheme"] for n in d["nodes"]).most_common():
               print(f"| {k} | {v} |")
+          speeds = [n["speed_mbps"] for n in d["nodes"] if n.get("speed_mbps")]
+          if speeds:
+              print("")
+              print(f"speed range: {min(speeds):.2f} – {max(speeds):.2f} MB/s")
           PY
           else
             echo "no output produced" >> $GITHUB_STEP_SUMMARY
@@ -67,11 +87,21 @@ jobs:
         run: |
           git config user.name  "nodefusion-bot"
           git config user.email "nodefusion-bot@users.noreply.github.com"
-          git add out/
+          git fetch origin main
+          git reset --soft origin/main 2>/dev/null || true
+          git add -A out/
           if git diff --cached --quiet; then
-            echo "no changes"
-          else
-            ALIVE=$(python -c "import json;print(json.load(open('out/nodes.json',encoding='utf-8'))['count'])")
-            git commit -m "chore: update nodes (${ALIVE} alive) $(date -u +%Y-%m-%dT%H:%MZ)"
-            git push
+            echo "no changes in out/"
+            exit 0
           fi
+          ALIVE=$(python -c "import json;print(json.load(open('out/nodes.json',encoding='utf-8'))['count'])")
+          for i in 1 2 3 4 5; do
+            git commit -m "chore: update nodes (${ALIVE} alive) $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            if git push origin HEAD:main; then echo "pushed on attempt $i"; exit 0; fi
+            echo "rejected, retry $i"
+            git fetch origin main
+            git reset --soft origin/main
+            git add -A out/
+            sleep 5
+          done
+          exit 1
