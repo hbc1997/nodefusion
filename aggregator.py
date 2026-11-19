@@ -751,28 +751,43 @@ def _download_mihomo(dest: str = "./mihomo") -> str | None:
     return None
 
 
-def _write_speedtest_cfg(nodes: list[Node], path: str) -> int:
-    """写测速用 mihomo 配置，返回写入节点数。"""
+LISTEN_BASE = 20000
+
+
+def _write_speedtest_cfg(nodes: list[Node], path: str) -> list[tuple[int, Node]]:
+    """写测速配置：每个节点分配独立 http listener 端口，避免并发串扰。
+
+    返回 [(listen_port, node)]。
+    """
     body: list[str] = []
-    tags: list[str] = []
+    listeners: list[str] = []
+    pairs: list[tuple[int, Node]] = []
     used: dict[str, int] = {}
-    for i, n in enumerate(nodes):
-        tag = f"n{i:04d}"
+    idx = 0
+    for n in nodes:
+        tag = f"n{idx:04d}"
         lines = node_to_yaml_lines(n, tag)
         if not lines:
             continue
         body.extend(lines)
-        tags.append(tag)
-    if not tags:
-        return 0
+        lport = LISTEN_BASE + idx
+        listeners.append(f"  - name: in{idx:04d}")
+        listeners.append("    type: http")
+        listeners.append(f"    port: {lport}")
+        listeners.append("    listen: 127.0.0.1")
+        listeners.append(f"    proxy: {tag}")
+        pairs.append((lport, n))
+        idx += 1
+
+    if not pairs:
+        return []
+
     cfg = [
-        f"mixed-port: {PROXY_PORT}",
-        "allow-lan: false",
         "mode: global",
         "log-level: silent",
         "ipv6: false",
         "unified-delay: true",
-        f"external-controller: 127.0.0.1:{CTRL_PORT}",
+        "tcp-concurrent: true",
         "profile:",
         "  store-selected: false",
         "dns:",
@@ -781,65 +796,92 @@ def _write_speedtest_cfg(nodes: list[Node], path: str) -> int:
         "proxies:",
     ] + body + [
         "",
-        "proxy-groups:",
-        "  - name: GLOBAL",
-        "    type: select",
-        "    proxies:",
-    ] + [f"      - {_ys(t)}" for t in tags] + [""]
+        "listeners:",
+    ] + listeners + [""]
+
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(cfg))
-    return len(tags)
+    return pairs
 
 
-async def _http_get(url: str, timeout: float, proxy: str | None = None,
-                    read_bytes: int = 0) -> tuple[int, float]:
-    """简易 HTTP GET，返回 (字节数, 毫秒)。proxy 形如 host:port。"""
-    p = urllib.parse.urlsplit(url)
+async def _proxy_download(target: str, proxy_host: str, proxy_port: int,
+                          timeout: float, max_bytes: int) -> tuple[int, float]:
+    """通过 HTTP 代理下载，返回 (字节数, 毫秒)。
+
+    走标准 HTTP proxy 语义：请求行用绝对 URI，Host 头为目标主机。
+    """
+    p = urllib.parse.urlsplit(target)
     host = p.hostname
     port = p.port or 80
-    path = (p.path or "/") + (("?" + p.query) if p.query else "")
     t0 = time.perf_counter()
-    try:
-        if proxy:
-            ph, _, pp = proxy.partition(":")
-            conn = asyncio.open_connection(ph, int(pp))
-        else:
-            conn = asyncio.open_connection(host, port)
-        reader, writer = await asyncio.wait_for(conn, timeout)
-    except Exception:
-        return 0, -1.0
+    writer = None
     got = 0
     try:
-        req = (f"GET {url} HTTP/1.1\r\nHost: {host}\r\n"
-               f"User-Agent: {UA}\r\nAccept: */*\r\nConnection: close\r\n\r\n")
+        reader, writer = await asyncio.wait_for(
+            asyncio.open_connection(proxy_host, proxy_port), timeout)
+        req = (
+            f"GET {target} HTTP/1.1\r\n"
+            f"Host: {host}\r\n"
+            f"User-Agent: {UA}\r\n"
+            f"Accept: */*\r\n"
+            f"Connection: close\r\n\r\n"
+        )
         writer.write(req.encode())
         await asyncio.wait_for(writer.drain(), timeout)
-        while True:
+        buf = bytearray()
+        while len(buf) < max_bytes:
             chunk = await asyncio.wait_for(reader.read(65536), timeout)
             if not chunk:
                 break
-            got += len(chunk)
-            if read_bytes and got >= read_bytes:
-                break
+            buf += chunk
+        raw = bytes(buf)
+        if not raw:
+            return 0, -1.0
+        head, _, body = raw.partition(b"\r\n\r\n")
+        status = head.split(b"\r\n", 1)[0].decode("latin-1", "replace")
+        if " 200 " not in status and not re.search(r"\s200\s*$", status):
+            return 0, -1.0
+        hl = head.lower()
+        if b"transfer-encoding: chunked" in hl:
+            out, pos = [], 0
+            while pos < len(body):
+                nl = body.find(b"\r\n", pos)
+                if nl < 0:
+                    break
+                try:
+                    size = int(body[pos:nl].split(b";")[0], 16)
+                except ValueError:
+                    break
+                if size == 0:
+                    break
+                out.append(body[nl + 2: nl + 2 + size])
+                pos = nl + 2 + size + 2
+            if out:
+                body = b"".join(out)
+        elif b"content-length:" in hl:
+            m = re.search(rb"content-length:\s*(\d+)", hl)
+            if m:
+                want = int(m.group(1))
+                if len(body) >= want:
+                    body = body[:want]
+                else:
+                    body = body[:want]
+        got = len(body)
+        el = (time.perf_counter() - t0) * 1000.0
+        return got, el
     except Exception:
-        pass
+        return 0, -1.0
     finally:
-        writer.close()
-        try:
-            await writer.wait_closed()
-        except Exception:
-            pass
-    el = (time.perf_counter() - t0) * 1000.0
-    return got, el
+        if writer is not None:
+            writer.close()
+            try:
+                await writer.wait_closed()
+            except Exception:
+                pass
 
 
-async def _ctrl_get(path: str, timeout: float = 6.0) -> dict | None:
-    got, _ = await _http_get(f"http://127.0.0.1:{CTRL_PORT}{path}", timeout, read_bytes=0)
-    # 需要拿 body，改用带 body 的实现
-    return None
-
-
-async def ctrl_request(method: str, path: str, timeout: float = 8.0) -> dict | None:
+async def ctrl_request(method: str, path: str, timeout: float = 8.0,
+                       body: str | None = None) -> dict | None:
     """访问 mihomo external-controller。"""
     try:
         reader, writer = await asyncio.wait_for(
@@ -847,8 +889,14 @@ async def ctrl_request(method: str, path: str, timeout: float = 8.0) -> dict | N
     except Exception:
         return None
     try:
-        req = (f"{method} {path} HTTP/1.1\r\nHost: 127.0.0.1\r\n"
-               f"Connection: close\r\n\r\n")
+        hdrs = f"{method} {path} HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n"
+        if body is not None:
+            b = body.encode()
+            hdrs += (f"Content-Type: application/json\r\n"
+                     f"Content-Length: {len(b)}\r\n")
+        req = hdrs + "\r\n"
+        if body is not None:
+            req += body
         writer.write(req.encode())
         await asyncio.wait_for(writer.drain(), timeout)
         raw = await asyncio.wait_for(reader.read(1 << 20), timeout)
@@ -884,7 +932,7 @@ async def ctrl_request(method: str, path: str, timeout: float = 8.0) -> dict | N
 
 async def speedtest_via_mihomo(candidates: list[Node], min_speed: float,
                                max_test: int, concurrency: int) -> list[Node]:
-    """用 mihomo 实测节点下载速度，返回 speed >= min_speed(MB/s) 的节点。"""
+    """用 mihomo 实测下载速度，返回 speed >= min_speed(MB/s) 的节点。"""
     if not candidates:
         return []
 
@@ -892,82 +940,89 @@ async def speedtest_via_mihomo(candidates: list[Node], min_speed: float,
     if not core:
         core = _download_mihomo()
     if not core:
-        print("      !! mihomo unavailable, falling back to delay-only ranking", flush=True)
+        print("      !! mihomo unavailable, skip speedtest", flush=True)
         return []
 
     cfg_path = "./speedtest.yaml"
-    n_written = _write_speedtest_cfg(candidates, cfg_path)
-    if n_written == 0:
-        print("      !! no node has complete params, skip speedtest", flush=True)
+    pairs = _write_speedtest_cfg(candidates[:max_test], cfg_path)
+    if not pairs:
+        print("      !! no usable nodes for speedtest", flush=True)
         return []
-    print(f"      mihomo config: {n_written} usable nodes", flush=True)
+    print(f"      config: {len(pairs)} listeners prepared", flush=True)
 
     proc = None
     try:
         proc = await asyncio.create_subprocess_exec(
             core, "-d", "./mihomo-data", "-f", cfg_path,
             stdout=asyncio.subprocess.DEVNULL,
-            stderr=asyncio.subprocess.DEVNULL,
+            stderr=asyncio.subprocess.PIPE,
         )
-        # 等控制器就绪
-        ready = False
-        for _ in range(60):
+        # 等第一个 listener 端口可连（说明配置加载完成）
+        ok = False
+        for _ in range(40):
             await asyncio.sleep(0.5)
-            v = await ctrl_request("GET", "/version", timeout=1.5)
-            if v and "version" in v:
-                ready = True
+            try:
+                r, w = await asyncio.wait_for(
+                    asyncio.open_connection("127.0.0.1", pairs[0][0]), 1.0)
+                w.close()
+                try:
+                    await w.wait_closed()
+                except Exception:
+                    pass
+                ok = True
                 break
-        if not ready:
-            print("      !! mihomo controller not ready", flush=True)
+            except Exception:
+                if proc.returncode is not None:
+                    err = b""
+                    try:
+                        err = await proc.stderr.read()
+                    except Exception:
+                        pass
+                    print(f"      !! mihomo exited: {err[-400:].decode('utf-8','replace')}",
+                          flush=True)
+                    return []
+        if not ok:
+            print("      !! mihomo listeners not ready", flush=True)
             return []
-        print(f"      mihomo ready: {v.get('version')}", flush=True)
+        print(f"      mihomo ready, {len(pairs)} listeners", flush=True)
 
-        # 并发测速
         sem = asyncio.Semaphore(concurrency)
 
-        async def test_one(idx: int, n: Node) -> Node | None:
+        async def test_one(lport: int, n: Node) -> Node | None:
             async with sem:
-                tag = f"n{idx:04d}"
-                await ctrl_request("PUT", f"/proxies/GLOBAL", timeout=5)  # 触发初始化
-                # 用 delay 接口测真实 HTTP 延迟
-                d = await ctrl_request(
-                    "GET",
-                    f"/proxies/{urllib.parse.quote(tag)}/delay"
-                    f"?url={urllib.parse.quote(DELAYTEST_URL, safe='')}&timeout=4000",
-                    timeout=8.0)
-                if not d or not isinstance(d.get("delay"), int) or d["delay"] <= 0:
-                    return None
-                n.latency = float(d["delay"])
-                # 下载测速：跑到 10MB 或 6 秒上限
-                got, el = await asyncio.wait_for(
-                    _http_get(SPEEDTEST_URL, 8.0,
-                              proxy=f"127.0.0.1:{PROXY_PORT}",
-                              read_bytes=10 * 1024 * 1024),
-                    12.0)
+                try:
+                    got, el = await asyncio.wait_for(
+                        _proxy_download(SPEEDTEST_URL, "127.0.0.1", lport,
+                                        timeout=8.0, max_bytes=8 * 1024 * 1024),
+                        15.0)
+                except Exception:
+                    n.speed = 0.0
+                    return n
                 if got <= 0 or el <= 0:
                     n.speed = 0.0
                     return n
                 mb = got / (1024.0 * 1024.0)
-                n.speed = round(mb / (el / 1000.0), 3)
+                n.speed = round(mb / max(el / 1000.0, 0.001), 3)
                 return n
 
-        order = [(i, n) for i, n in enumerate(candidates)
-                 if node_to_yaml_lines(n, f"n{i:04d}")]
-        order = order[:max_test]
-        print(f"      speed testing {len(order)} nodes "
+        print(f"      downloading via {len(pairs)} nodes "
               f"(concurrency={concurrency}) ...", flush=True)
         t0 = time.perf_counter()
         results = await asyncio.gather(
-            *[test_one(i, n) for i, n in order], return_exceptions=True)
+            *[test_one(lp, n) for lp, n in pairs], return_exceptions=True)
         el = time.perf_counter() - t0
 
-        passed: list[Node] = []
+        passed, tested = [], 0
         for r in results:
-            if isinstance(r, Node) and r.speed >= min_speed:
-                passed.append(r)
+            if isinstance(r, Node):
+                tested += 1
+                if r.speed >= min_speed:
+                    passed.append(r)
         passed.sort(key=lambda n: n.speed, reverse=True)
-        print(f"      speedtest done in {el:.1f}s: "
-              f"{len(passed)}/{len(order)} >= {min_speed} MB/s", flush=True)
+        print(f"      speedtest {el:.1f}s: {len(passed)}/{tested} "
+              f">= {min_speed} MB/s", flush=True)
+        if tested and passed:
+            print(f"      fastest: {passed[0].speed:.2f} MB/s", flush=True)
         return passed
     finally:
         if proc and proc.returncode is None:
@@ -979,6 +1034,7 @@ async def speedtest_via_mihomo(candidates: list[Node], min_speed: float,
                     proc.kill()
                 except Exception:
                     pass
+
 
 # ----------------------------------------------------------------------------
 # 存活性探测
