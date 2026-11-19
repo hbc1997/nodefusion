@@ -1089,7 +1089,7 @@ def to_plain(nodes: list[Node]) -> str:
             u = _rebuild_uri(n)
             if u:
                 out.append(u)
-    return "\n".join(out)
+    return "\n".join(out) + "\n"
 
 
 def _rebuild_uri(n: Node) -> str:
@@ -1148,7 +1148,17 @@ def _rebuild_uri(n: Node) -> str:
 
 
 def to_base64(nodes: list[Node]) -> str:
-    return base64.b64encode(to_plain(nodes).encode()).decode()
+    """生成 base64 订阅。
+
+    兼容性要点：
+    - 每 76 字符换行（MIME 标准），v2rayN / Shadowrocket 等都稳定
+    - 末尾补换行符，避免逐行解析器丢掉最后一段
+    - 使用标准字母表（+ /），不用 urlsafe（- _）
+    """
+    raw = to_plain(nodes).encode()
+    b = base64.b64encode(raw).decode()
+    wrapped = "\n".join(b[i:i + 76] for i in range(0, len(b), 76))
+    return wrapped + "\n"
 
 
 def to_json(nodes: list[Node], meta: dict) -> str:
@@ -1259,10 +1269,12 @@ async def run(args) -> int:
         "elapsed_ms": round((time.perf_counter() - t_start) * 1000),
         "tls": tls_stats,
     }
+    clash_cfg = to_clash_yaml(alive)
     files = {
         "sub.txt": to_plain(alive),
         "sub_base64.txt": to_base64(alive),
-        "clash.yaml": to_clash_yaml(alive),
+        "clash.yaml": clash_cfg,
+        "config.yaml": clash_cfg,          # 别名，部分客户端只认这个名
         "nodes.json": to_json(alive, meta),
     }
     for fn, content in files.items():
