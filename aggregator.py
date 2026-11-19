@@ -712,8 +712,9 @@ def _mihomo_urls() -> list[str]:
 
 MIHOMO_URLS: list[str] = []  # 运行时由 _mihomo_urls() 填充
 
-SPEEDTEST_URL = "http://cachefly.cachefly.net/10mb.test"
-DELAYTEST_URL = "http://www.gstatic.com/generate_204"
+SPEEDTEST_URL = "https://speed.cloudflare.com/__down?bytes=10000000"
+SPEEDTEST_URL_SMALL = "https://speed.cloudflare.com/__down?bytes=2000000"
+DELAYTEST_URL = "https://speed.cloudflare.com/__down?bytes=0"
 
 CTRL_PORT = 19090
 PROXY_PORT = 17890
@@ -990,18 +991,23 @@ async def speedtest_via_mihomo(candidates: list[Node], min_speed: float,
 
         async def test_one(lport: int, n: Node) -> Node | None:
             async with sem:
-                try:
-                    got, el = await asyncio.wait_for(
-                        _proxy_download(SPEEDTEST_URL, "127.0.0.1", lport,
-                                        timeout=8.0, max_bytes=8 * 1024 * 1024),
-                        15.0)
-                except Exception:
+                tasks = [
+                    asyncio.create_task(_proxy_download(
+                        SPEEDTEST_URL_SMALL, "127.0.0.1", lport,
+                        timeout=6.0, max_bytes=6 * 1024 * 1024))
+                    for _ in range(3)
+                ]
+                t0 = time.perf_counter()
+                outs = await asyncio.gather(*tasks, return_exceptions=True)
+                el = (time.perf_counter() - t0) * 1000.0
+                total = 0
+                for o in outs:
+                    if isinstance(o, tuple) and o[0] > 0:
+                        total += o[0]
+                if total <= 0 or el <= 0:
                     n.speed = 0.0
                     return n
-                if got <= 0 or el <= 0:
-                    n.speed = 0.0
-                    return n
-                mb = got / (1024.0 * 1024.0)
+                mb = total / (1024.0 * 1024.0)
                 n.speed = round(mb / max(el / 1000.0, 0.001), 3)
                 return n
 
@@ -1287,7 +1293,7 @@ def main() -> int:
                     help="minimum download speed in MB/s (default 0.1)")
     ap.add_argument("--max-speedtest", type=int, default=150,
                     help="max nodes to speed test")
-    ap.add_argument("--speed-concurrency", type=int, default=12)
+    ap.add_argument("--speed-concurrency", type=int, default=24)
     ap.add_argument("--no-speedtest", action="store_true",
                     help="skip mihomo speed test")
     args = ap.parse_args()
