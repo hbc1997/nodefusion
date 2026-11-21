@@ -1,5 +1,5 @@
-# nodefusion  generated 2026-11-20 15:29:08 UTC
-# alive: 38   speed-tested: 38
+# nodefusion  generated 2026-11-21 00:01:23 UTC
+# alive: 36   speed-tested: 36
 mixed-port: 7890
 allow-lan: false
 mode: rule
@@ -17,59 +17,160 @@ dns:
     - 119.29.29.29
 
 proxies:
-  - name: "'🇺🇸 美国 | USA #12'"
-    type: vmess
-    server: "US032012.westmgreen.com"
+  - name: "216.152.147.79:443"
+    type: trojan
+    server: "216.152.147.79"
     port: 443
-    uuid: "5decdd8c-5790-4d16-9ce9-5cd7fb1934fc"
-    alterId: 0
-    cipher: "auto"
-    network: ws
-    tls: true
-    ws-opts:
-      path: "/wes"
-    skip-cert-verify: true
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "blog.connectingpeoplewithgreatjobs.com"
     udp: true
-  - name: "'🇺🇸 美国 | USA #10'"
-    type: vmess
-    server: "192.220.47.85"
-    port: 44441
-    uuid: "de4e0335-2a3b-4006-d746-c939fa85fdc3"
-    alterId: 0
-    cipher: "auto"
-    network: http
-    skip-cert-verify: true
+  - name: "216.152.147.93:443"
+    type: trojan
+    server: "216.152.147.93"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "connectingpeoplewithgreatjobs.com"
     udp: true
-  - name: "45.144.234.157:14430"
+  - name: "66.163.127.225:443"
+    type: trojan
+    server: "66.163.127.225"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "cdn.indyourperfectremotetechjobfromthecomfortofhome.com"
+    udp: true
+  - name: "45.86.60.174:16443"
     type: vless
-    server: "45.144.234.157"
-    port: 14430
-    uuid: "59b0d30e-9b29-4fda-a35c-b2901ec32db7"
-    network: ws
-    ws-opts:
-      path: "/vless"
+    server: "45.86.60.174"
+    port: 16443
+    uuid: "13e541f3-d09d-4633-89df-8513db0ced20"
+    network: tcp
+    udp: true
+  - name: "🇮🇹 意大利2|@ripaojiedian"
+    type: ss
+    server: "202.50.253.27"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "158.247.253.243:443"
+    type: trojan
+    server: "158.247.253.243"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "connectgraduateswithjobopeningsandgrowprofessionally.com"
+    skip-cert-verify: true
     udp: true
   - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)"
+    type: ss
+    server: "202.50.253.54"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇳🇿 新西兰 V2CROSS.COM"
     type: ss
     server: "202.50.253.90"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
-  - name: "英国_112021017"
-    type: hysteria2
-    server: "82.40.63.138"
+  - name: "208.69.78.33:443"
+    type: trojan
+    server: "208.69.78.33"
     port: 443
-    password: "ca60984f-b1f0-4073-bd33-4c75168f749a"
-    sni: "kraw-pl-4.fantoff.online"
-    skip-cert-verify: true
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "courses.yourultimateprofessionalcareerhub.com"
     udp: true
-  - name: "🇳🇿 新西兰 V2CROSS.COM"
+  - name: "45.63.30.142:443"
+    type: trojan
+    server: "45.63.30.142"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "connectwithemployerstohireyouridealteam.com"
+    udp: true
+  - name: "🇳🇿 新西兰 V2CROSS.COM-1"
+    type: ss
+    server: "202.50.253.99"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
     type: ss
     server: "202.50.253.18"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-2"
+    type: ss
+    server: "202.50.253.72"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇮🇹 意大利(mibei77.com 米贝节点分享)"
+    type: ss
+    server: "202.50.253.81"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇳🇿 新西兰 V2CROSS.COM-2"
+    type: ss
+    server: "202.50.253.63"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-3"
+    type: ss
+    server: "202.50.253.45"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "178.172.227.124:10443"
+    type: vless
+    server: "178.172.227.124"
+    port: 10443
+    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    network: tcp
+    udp: true
+  - name: "🇳🇿 新西兰 V2CROSS.COM-3"
+    type: ss
+    server: "202.50.253.36"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "144.31.215.244:2053"
+    type: vless
+    server: "144.31.215.244"
+    port: 2053
+    uuid: "fbe22815-0718-4eae-816f-e91c67d15b54"
+    network: tcp
+    tls: true
+    servername: "144.31.215.244"
+    flow: "xtls-rprx-vision"
+    udp: true
+  - name: "hysteria.udpgw.com:8443"
+    type: hysteria2
+    server: "hysteria.udpgw.com"
+    port: 8443
+    password: "HowdyHysteria2023w0W"
+    sni: "sni-here.com"
+    obfs: "salamander"
+    obfs-password: "HysteriaHowdy"
+    skip-cert-verify: true
+    udp: true
+  - name: "美国_112021124"
+    type: hysteria2
+    server: "168.113.254.247"
+    port: 443
+    password: "b006650f-8771-0001-b7fa-e18fc6e80ef1"
+    sni: "vcerx-ru-67sb.my-fade.cloud"
+    skip-cert-verify: true
     udp: true
   - name: "'🇩🇪 德国 | DEU #6'"
     type: vless
@@ -82,48 +183,41 @@ proxies:
     ws-opts:
       path: "/cdn/v3/live"
     udp: true
-  - name: "158.247.253.243:443"
-    type: trojan
-    server: "158.247.253.243"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "connectgraduateswithjobopeningsandgrowprofessionally.com"
-    skip-cert-verify: true
-    udp: true
-  - name: "178.172.227.124:10443"
+  - name: "5.178.109.174:14430"
     type: vless
-    server: "178.172.227.124"
-    port: 10443
-    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    server: "5.178.109.174"
+    port: 14430
+    uuid: "80de563a-cac8-40ea-8cb0-4cb082dd92f9"
+    network: ws
+    ws-opts:
+      path: "/vless"
+    udp: true
+  - name: "🇪🇪[www.v2nodes.com] vless-EE-1..."
+    type: vless
+    server: "136.148.83.69"
+    port: 443
+    uuid: "666821a2-5c3d-0001-a56f-5a3a562d7324"
     network: tcp
+    tls: true
+    servername: "szqbx-ru-77dc.my-fade.cloud"
     udp: true
-  - name: "216.152.147.79:443"
-    type: trojan
-    server: "216.152.147.79"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "blog.connectingpeoplewithgreatjobs.com"
+  - name: "45.144.234.157:14430"
+    type: vless
+    server: "45.144.234.157"
+    port: 14430
+    uuid: "59b0d30e-9b29-4fda-a35c-b2901ec32db7"
+    network: ws
+    ws-opts:
+      path: "/vless"
     udp: true
-  - name: "45.63.30.142:443"
-    type: trojan
-    server: "45.63.30.142"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "connectwithemployerstohireyouridealteam.com"
-    udp: true
-  - name: "🇳🇿 新西兰 V2CROSS.COM-1"
-    type: ss
-    server: "202.50.253.45"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
-    type: ss
-    server: "202.50.253.54"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+  - name: "178.172.227.228:14430"
+    type: vless
+    server: "178.172.227.228"
+    port: 14430
+    uuid: "b6e5dc56-836f-48c1-9163-b0b0b43b647d"
+    network: ws
+    ws-opts:
+      path: "/vless"
     udp: true
   - name: "'🏳[www.v2nodes.com] vless- #4'"
     type: vless
@@ -136,60 +230,21 @@ proxies:
     ws-opts:
       path: "/vless/"
     udp: true
-  - name: "🇮🇹 意大利2|@ripaojiedian"
-    type: ss
-    server: "202.50.253.27"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+  - name: "瑞典_112021160"
+    type: hysteria2
+    server: "95.143.196.97"
+    port: 443
+    password: "769f34f0-1500-488f-b414-03bc90666502"
+    sni: "se.mimowhat.online"
     udp: true
-  - name: "152.69.226.63:25555"
+  - name: "ov-france1.09vpn.com:80"
     type: vless
-    server: "152.69.226.63"
-    port: 25555
-    uuid: "27c5483f-17f4-48ae-9a04-def53d88440d"
+    server: "ov-france1.09vpn.com"
+    port: 80
+    uuid: "25f86cb1-2140-4085-abcb-c3a0ea7a4be0"
     network: ws
     ws-opts:
-      path: "/"
-    udp: true
-  - name: "216.152.147.93:443"
-    type: trojan
-    server: "216.152.147.93"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "connectingpeoplewithgreatjobs.com"
-    udp: true
-  - name: "阿联酋_112021005"
-    type: hysteria2
-    server: "31.59.169.225"
-    port: 443
-    password: "ca60984f-b1f0-4073-bd33-4c75168f749a"
-    sni: "ge-beer-1.fantoff.online"
-    skip-cert-verify: true
-    udp: true
-  - name: "🇮🇹 意大利(mibei77.com 米贝节点分享)"
-    type: ss
-    server: "202.50.253.81"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "66.163.127.225:443"
-    type: trojan
-    server: "66.163.127.225"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "cdn.indyourperfectremotetechjobfromthecomfortofhome.com"
-    udp: true
-  - name: "hysteria.udpgw.com:8443"
-    type: hysteria2
-    server: "hysteria.udpgw.com"
-    port: 8443
-    password: "HowdyHysteria2023w0W"
-    sni: "sni-here.com"
-    obfs: "salamander"
-    obfs-password: "HysteriaHowdy"
-    skip-cert-verify: true
+      path: "/vless/"
     udp: true
   - name: "57.129.132.223:80"
     type: vless
@@ -200,118 +255,12 @@ proxies:
     ws-opts:
       path: "/vless/"
     udp: true
-  - name: "144.31.215.244:2053"
-    type: vless
-    server: "144.31.215.244"
-    port: 2053
-    uuid: "fbe22815-0718-4eae-816f-e91c67d15b54"
-    network: tcp
-    tls: true
-    servername: "144.31.215.244"
-    flow: "xtls-rprx-vision"
-    udp: true
-  - name: "🇳🇿 新西兰 V2CROSS.COM-2"
-    type: ss
-    server: "202.50.253.72"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇳🇿 新西兰 V2CROSS.COM-3"
-    type: ss
-    server: "202.50.253.36"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇳🇿 新西兰 V2CROSS.COM-4"
-    type: ss
-    server: "202.50.253.99"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-2"
-    type: ss
-    server: "202.50.253.63"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "瑞典_112021160"
-    type: hysteria2
-    server: "95.143.196.97"
-    port: 443
-    password: "769f34f0-1500-488f-b414-03bc90666502"
-    sni: "se.mimowhat.online"
-    udp: true
-  - name: "5.178.109.174:14430"
-    type: vless
-    server: "5.178.109.174"
-    port: 14430
-    uuid: "80de563a-cac8-40ea-8cb0-4cb082dd92f9"
-    network: ws
-    ws-opts:
-      path: "/vless"
-    udp: true
-  - name: "'🇸🇬 新加坡 | SGP #4'"
-    type: vmess
-    server: "43.228.126.187"
-    port: 47630
-    uuid: "9e5c6ebf-35f9-49a3-9f12-cba2b7cdbccb"
-    alterId: 0
-    cipher: "auto"
-    network: none
-    udp: true
   - name: "150.95.109.109:2086"
     type: vless
     server: "150.95.109.109"
     port: 2086
     uuid: "b83faafc-cbb7-4655-99d4-2c4c39a49d1b"
     network: tcp
-    udp: true
-  - name: "🇪🇪[www.v2nodes.com] vless-EE-1..."
-    type: vless
-    server: "136.148.83.69"
-    port: 443
-    uuid: "666821a2-5c3d-0001-a56f-5a3a562d7324"
-    network: tcp
-    tls: true
-    servername: "szqbx-ru-77dc.my-fade.cloud"
-    udp: true
-  - name: "208.69.78.33:443"
-    type: trojan
-    server: "208.69.78.33"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "courses.yourultimateprofessionalcareerhub.com"
-    udp: true
-  - name: "13.140.56.100:14430"
-    type: vless
-    server: "13.140.56.100"
-    port: 14430
-    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
-    network: ws
-    ws-opts:
-      path: "/vless"
-    udp: true
-  - name: "🇬🇧[www.v2nodes.com] vless-GB-1..."
-    type: vless
-    server: "xray-ckc68nno-swift-harbor-8.cloady.io"
-    port: 443
-    uuid: "b004e898-f6cf-54a5-d281-f063d741ad53"
-    network: ws
-    tls: true
-    servername: "xray-ckc68nno-swift-harbor-8.cloady.io"
-    ws-opts:
-      path: "/3e0261245277336d"
-    udp: true
-  - name: "15.235.184.127:443"
-    type: trojan
-    server: "15.235.184.127"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "exploredigitaljobplatformandfindonlinework.com"
     udp: true
   - name: "'🇷🇺 俄罗斯 | RUS #3'"
     type: vless
@@ -323,6 +272,31 @@ proxies:
     servername: "sequoia.merlano.monster"
     ws-opts:
       path: "/api/de1/stream"
+    udp: true
+  - name: "13.140.56.100:14430"
+    type: vless
+    server: "13.140.56.100"
+    port: 14430
+    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
+    network: ws
+    ws-opts:
+      path: "/vless"
+    udp: true
+  - name: "152.69.226.63:25555"
+    type: vless
+    server: "152.69.226.63"
+    port: 25555
+    uuid: "27c5483f-17f4-48ae-9a04-def53d88440d"
+    network: ws
+    ws-opts:
+      path: "/"
+    udp: true
+  - name: "15.235.184.127:443"
+    type: trojan
+    server: "15.235.184.127"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "exploredigitaljobplatformandfindonlinework.com"
     udp: true
   - name: "95.174.68.188:14430"
     type: vless
@@ -339,43 +313,41 @@ proxy-groups:
     type: select
     proxies:
       - AUTO
-      - "'🇺🇸 美国 | USA #12'"
-      - "'🇺🇸 美国 | USA #10'"
-      - "45.144.234.157:14430"
-      - "🇺🇸 US美国(mibei77.com 米贝节点分享)"
-      - "英国_112021017"
-      - "🇳🇿 新西兰 V2CROSS.COM"
-      - "'🇩🇪 德国 | DEU #6'"
-      - "158.247.253.243:443"
-      - "178.172.227.124:10443"
       - "216.152.147.79:443"
+      - "216.152.147.93:443"
+      - "66.163.127.225:443"
+      - "45.86.60.174:16443"
+      - "🇮🇹 意大利2|@ripaojiedian"
+      - "158.247.253.243:443"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)"
+      - "🇳🇿 新西兰 V2CROSS.COM"
+      - "208.69.78.33:443"
       - "45.63.30.142:443"
       - "🇳🇿 新西兰 V2CROSS.COM-1"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
-      - "'🏳[www.v2nodes.com] vless- #4'"
-      - "🇮🇹 意大利2|@ripaojiedian"
-      - "152.69.226.63:25555"
-      - "216.152.147.93:443"
-      - "阿联酋_112021005"
-      - "🇮🇹 意大利(mibei77.com 米贝节点分享)"
-      - "66.163.127.225:443"
-      - "hysteria.udpgw.com:8443"
-      - "57.129.132.223:80"
-      - "144.31.215.244:2053"
-      - "🇳🇿 新西兰 V2CROSS.COM-2"
-      - "🇳🇿 新西兰 V2CROSS.COM-3"
-      - "🇳🇿 新西兰 V2CROSS.COM-4"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)-2"
-      - "瑞典_112021160"
+      - "🇮🇹 意大利(mibei77.com 米贝节点分享)"
+      - "🇳🇿 新西兰 V2CROSS.COM-2"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-3"
+      - "178.172.227.124:10443"
+      - "🇳🇿 新西兰 V2CROSS.COM-3"
+      - "144.31.215.244:2053"
+      - "hysteria.udpgw.com:8443"
+      - "美国_112021124"
+      - "'🇩🇪 德国 | DEU #6'"
       - "5.178.109.174:14430"
-      - "'🇸🇬 新加坡 | SGP #4'"
-      - "150.95.109.109:2086"
       - "🇪🇪[www.v2nodes.com] vless-EE-1..."
-      - "208.69.78.33:443"
-      - "13.140.56.100:14430"
-      - "🇬🇧[www.v2nodes.com] vless-GB-1..."
-      - "15.235.184.127:443"
+      - "45.144.234.157:14430"
+      - "178.172.227.228:14430"
+      - "'🏳[www.v2nodes.com] vless- #4'"
+      - "瑞典_112021160"
+      - "ov-france1.09vpn.com:80"
+      - "57.129.132.223:80"
+      - "150.95.109.109:2086"
       - "'🇷🇺 俄罗斯 | RUS #3'"
+      - "13.140.56.100:14430"
+      - "152.69.226.63:25555"
+      - "15.235.184.127:443"
       - "95.174.68.188:14430"
       - DIRECT
 
@@ -386,43 +358,41 @@ proxy-groups:
     tolerance: 50
     lazy: false
     proxies:
-      - "'🇺🇸 美国 | USA #12'"
-      - "'🇺🇸 美国 | USA #10'"
-      - "45.144.234.157:14430"
-      - "🇺🇸 US美国(mibei77.com 米贝节点分享)"
-      - "英国_112021017"
-      - "🇳🇿 新西兰 V2CROSS.COM"
-      - "'🇩🇪 德国 | DEU #6'"
-      - "158.247.253.243:443"
-      - "178.172.227.124:10443"
       - "216.152.147.79:443"
+      - "216.152.147.93:443"
+      - "66.163.127.225:443"
+      - "45.86.60.174:16443"
+      - "🇮🇹 意大利2|@ripaojiedian"
+      - "158.247.253.243:443"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)"
+      - "🇳🇿 新西兰 V2CROSS.COM"
+      - "208.69.78.33:443"
       - "45.63.30.142:443"
       - "🇳🇿 新西兰 V2CROSS.COM-1"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
-      - "'🏳[www.v2nodes.com] vless- #4'"
-      - "🇮🇹 意大利2|@ripaojiedian"
-      - "152.69.226.63:25555"
-      - "216.152.147.93:443"
-      - "阿联酋_112021005"
-      - "🇮🇹 意大利(mibei77.com 米贝节点分享)"
-      - "66.163.127.225:443"
-      - "hysteria.udpgw.com:8443"
-      - "57.129.132.223:80"
-      - "144.31.215.244:2053"
-      - "🇳🇿 新西兰 V2CROSS.COM-2"
-      - "🇳🇿 新西兰 V2CROSS.COM-3"
-      - "🇳🇿 新西兰 V2CROSS.COM-4"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)-2"
-      - "瑞典_112021160"
+      - "🇮🇹 意大利(mibei77.com 米贝节点分享)"
+      - "🇳🇿 新西兰 V2CROSS.COM-2"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-3"
+      - "178.172.227.124:10443"
+      - "🇳🇿 新西兰 V2CROSS.COM-3"
+      - "144.31.215.244:2053"
+      - "hysteria.udpgw.com:8443"
+      - "美国_112021124"
+      - "'🇩🇪 德国 | DEU #6'"
       - "5.178.109.174:14430"
-      - "'🇸🇬 新加坡 | SGP #4'"
-      - "150.95.109.109:2086"
       - "🇪🇪[www.v2nodes.com] vless-EE-1..."
-      - "208.69.78.33:443"
-      - "13.140.56.100:14430"
-      - "🇬🇧[www.v2nodes.com] vless-GB-1..."
-      - "15.235.184.127:443"
+      - "45.144.234.157:14430"
+      - "178.172.227.228:14430"
+      - "'🏳[www.v2nodes.com] vless- #4'"
+      - "瑞典_112021160"
+      - "ov-france1.09vpn.com:80"
+      - "57.129.132.223:80"
+      - "150.95.109.109:2086"
       - "'🇷🇺 俄罗斯 | RUS #3'"
+      - "13.140.56.100:14430"
+      - "152.69.226.63:25555"
+      - "15.235.184.127:443"
       - "95.174.68.188:14430"
 
 rules:
