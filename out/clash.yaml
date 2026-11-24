@@ -1,5 +1,5 @@
-# nodefusion  generated 2026-11-24 09:56:12 UTC
-# alive: 27   speed-tested: 27
+# nodefusion  generated 2026-11-24 22:29:15 UTC
+# alive: 28   speed-tested: 28
 mixed-port: 7890
 allow-lan: false
 mode: rule
@@ -17,35 +17,30 @@ dns:
     - 119.29.29.29
 
 proxies:
-  - name: "🇺🇸US_14|2.0MB/s"
-    type: vless
-    server: "ws.liuzedong.ltd"
-    port: 443
-    uuid: "FCEAD694-2E27-4EEB-8836-9D4ACF3E028B"
-    network: ws
-    tls: true
-    servername: "ws.liuzedong.ltd"
-    ws-opts:
-      path: "/ws"
-    udp: true
-  - name: "日本_112415166"
-    type: hysteria2
-    server: "8.209.247.109"
-    port: 443
-    password: "usqmqUKJFIlCmvkCNSY64L3k"
-    sni: "8.209.247.109"
-    skip-cert-verify: true
-    udp: true
-  - name: "🇳🇿 新西兰 V2CROSS.COM"
+  - name: "🇭🇰 香港 阿里云"
     type: ss
-    server: "202.50.253.45"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    server: "47.85.227.36"
+    port: 443
+    cipher: "2022-blake3-chacha20-poly1305"
+    password: "3NBsnBLanPfG6i3S2GTHineswr6EeSJPb0PCeMQoGoA="
     udp: true
   - name: "🇮🇹 意大利2|@ripaojiedian"
     type: ss
     server: "202.50.253.27"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "66.163.127.225:443"
+    type: trojan
+    server: "66.163.127.225"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "cdn.indyourperfectremotetechjobfromthecomfortofhome.com"
+    udp: true
+  - name: "🇳🇿 新西兰 V2CROSS.COM"
+    type: ss
+    server: "202.50.253.45"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
@@ -68,38 +63,7 @@ proxies:
     ws-opts:
       path: "/vless"
     udp: true
-  - name: "178.172.227.124:10443"
-    type: vless
-    server: "178.172.227.124"
-    port: 10443
-    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
-    network: tcp
-    udp: true
-  - name: "ov-france1.09vpn.com:80"
-    type: vless
-    server: "ov-france1.09vpn.com"
-    port: 80
-    uuid: "25f86cb1-2140-4085-abcb-c3a0ea7a4be0"
-    network: ws
-    ws-opts:
-      path: "/vless/"
-    udp: true
-  - name: "防失效github+SubCrawler保加利亚_112415036"
-    type: hysteria2
-    server: "87.121.112.83"
-    port: 443
-    password: "9a9f167d-b461-466f-be50-f0ffd598a6f8"
-    sni: "bulghys.live"
-    skip-cert-verify: true
-    udp: true
-  - name: "45.63.30.142:443"
-    type: trojan
-    server: "45.63.30.142"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "connectwithemployerstohireyouridealteam.com"
-    udp: true
-  - name: "美国_1124154599"
+  - name: "ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ = @ꜰxxɴᴇᴛ🤡"
     type: hysteria2
     server: "216.73.157.142"
     port: 443
@@ -117,43 +81,21 @@ proxies:
     tls: true
     servername: "szqbx-ru-77dc.my-fade.cloud"
     udp: true
-  - name: "136.148.83.71:443"
+  - name: "'🇬🇧 英国 | GBR #3'"
     type: vless
-    server: "136.148.83.71"
+    server: "136.148.83.70"
     port: 443
     uuid: "00000000-0000-0001-0000-000000000000"
     network: tcp
     tls: true
-    servername: "wccfu-ru-79dc.my-fade.cloud"
+    servername: "aszbk-ru-78dc.my-fade.cloud"
     udp: true
-  - name: "🇳🇱 荷兰 V2CROSS.COM"
+  - name: "208.69.78.33:443"
     type: trojan
-    server: "bgsg1.hikigo.com"
+    server: "208.69.78.33"
     port: 443
-    password: "57beeeb0-03fc-4fc9-94da-7604488a7134"
-    sni: "bgsg1.hikigo.com"
-    udp: true
-  - name: "🇻🇳 越南|@ripaojiedian"
-    type: trojan
-    server: "xvxn1hkzf.mateflora.com"
-    port: 443
-    password: "57beeeb0-03fc-4fc9-94da-7604488a7134"
-    sni: "xvxn1hkzf.mateflora.com"
-    skip-cert-verify: true
-    udp: true
-  - name: "🇭🇰 香港 阿里云"
-    type: ss
-    server: "47.85.227.36"
-    port: 443
-    cipher: "2022-blake3-chacha20-poly1305"
-    password: "3NBsnBLanPfG6i3S2GTHineswr6EeSJPb0PCeMQoGoA="
-    udp: true
-  - name: "🇭🇰 香港 阿里云-1"
-    type: ss
-    server: "47.85.238.210"
-    port: 443
-    cipher: "2022-blake3-chacha20-poly1305"
-    password: "3NBsnBLanPfG6i3S2GTHineswr6EeSJPb0PCeMQoGoA="
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "courses.yourultimateprofessionalcareerhub.com"
     udp: true
   - name: "152.53.120.90:50955"
     type: vless
@@ -162,34 +104,12 @@ proxies:
     uuid: "5ab065b0-2c7a-45a0-829d-9af9af7d8e05"
     network: tcp
     udp: true
-  - name: "66.163.127.225:443"
-    type: trojan
-    server: "66.163.127.225"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "cdn.indyourperfectremotetechjobfromthecomfortofhome.com"
-    udp: true
-  - name: "77.93.89.2:443"
-    type: trojan
-    server: "77.93.89.2"
-    port: 443
-    password: "57beeeb0-03fc-4fc9-94da-7604488a7134"
-    sni: "bgsg1.hikigo.com"
-    skip-cert-verify: true
-    udp: true
-  - name: "216.152.147.79:443"
-    type: trojan
-    server: "216.152.147.79"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "blog.connectingpeoplewithgreatjobs.com"
-    udp: true
-  - name: "216.152.147.93:443"
-    type: trojan
-    server: "216.152.147.93"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "connectingpeoplewithgreatjobs.com"
+  - name: "178.172.227.124:10443"
+    type: vless
+    server: "178.172.227.124"
+    port: 10443
+    uuid: "1af36694-b548-4b18-89a0-bc076eab4ed7"
+    network: tcp
     udp: true
   - name: "57.129.132.223:80"
     type: vless
@@ -200,21 +120,125 @@ proxies:
     ws-opts:
       path: "/vless/"
     udp: true
-  - name: "208.69.78.33:443"
-    type: trojan
-    server: "208.69.78.33"
-    port: 443
-    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "courses.yourultimateprofessionalcareerhub.com"
-    udp: true
-  - name: "95.174.68.188:14430"
+  - name: "ov-france1.09vpn.com:80"
     type: vless
-    server: "95.174.68.188"
-    port: 14430
-    uuid: "965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0"
+    server: "ov-france1.09vpn.com"
+    port: 80
+    uuid: "25f86cb1-2140-4085-abcb-c3a0ea7a4be0"
     network: ws
     ws-opts:
-      path: "/vless"
+      path: "/vless/"
+    udp: true
+  - name: "🇻🇳 越南|@ripaojiedian"
+    type: trojan
+    server: "xvxn1hkzf.mateflora.com"
+    port: 443
+    password: "57beeeb0-03fc-4fc9-94da-7604488a7134"
+    sni: "xvxn1hkzf.mateflora.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "win2loxfde0303.gggrelay.org:34745"
+    type: trojan
+    server: "win2loxfde0303.gggrelay.org"
+    port: 34745
+    password: "57beeeb0-03fc-4fc9-94da-7604488a7134"
+    sni: "nu3rb.supertoolify.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "'🇩🇪 德国 | DEU #8'"
+    type: vless
+    server: "rowanberry.moltex.click"
+    port: 443
+    uuid: "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
+    network: ws
+    tls: true
+    servername: "rowanberry.moltex.click"
+    ws-opts:
+      path: "/api/de7/stream"
+    udp: true
+  - name: "'🇩🇪 德国 | DEU #14'"
+    type: vless
+    server: "spindle.filnex.baby"
+    port: 443
+    uuid: "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e"
+    network: ws
+    tls: true
+    servername: "elderglade.elvano.website"
+    ws-opts:
+      path: "/api/de5/stream"
+    udp: true
+  - name: "'🇩🇪 德国 | DEU #22'"
+    type: vless
+    server: "lagoon.gerqix.online"
+    port: 443
+    uuid: "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e"
+    network: ws
+    tls: true
+    servername: "lagoon.gerqix.online"
+    ws-opts:
+      path: "/api/de5/stream"
+    udp: true
+  - name: "'🇩🇪 德国 | DEU #5'"
+    type: vless
+    server: "inlay.merlano.monster"
+    port: 443
+    uuid: "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
+    network: ws
+    tls: true
+    servername: "inlay.merlano.monster"
+    ws-opts:
+      path: "/api/de3/stream"
+    udp: true
+  - name: "'🇩🇪 德国 | DEU #9'"
+    type: vless
+    server: "parchment.merlano.monster"
+    port: 443
+    uuid: "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
+    network: ws
+    tls: true
+    servername: "parchment.merlano.monster"
+    ws-opts:
+      path: "/api/de7/stream"
+    udp: true
+  - name: "'🇩🇪 德国 | DEU #21'"
+    type: vless
+    server: "sundial.filnex.baby"
+    port: 443
+    uuid: "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e"
+    network: ws
+    tls: true
+    servername: "silverfen.elvano.website"
+    ws-opts:
+      path: "/api/de4/stream"
+    udp: true
+  - name: "'🇩🇪 德国 | DEU #16'"
+    type: vless
+    server: "ws3.falmero.store"
+    port: 443
+    uuid: "0b6a7fe0-206b-4071-9f96-cd397d1ec01a"
+    network: ws
+    tls: true
+    servername: "paperbirch.merlano.monster"
+    ws-opts:
+      path: "/api/de1/stream"
+    udp: true
+  - name: "'🇩🇪 德国 | DEU #11'"
+    type: vless
+    server: "cove.gerqix.online"
+    port: 443
+    uuid: "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e"
+    network: ws
+    tls: true
+    servername: "cove.gerqix.online"
+    ws-opts:
+      path: "/api/de6/stream"
+    udp: true
+  - name: "216.152.147.79:443"
+    type: trojan
+    server: "216.152.147.79"
+    port: 443
+    password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+    sni: "blog.connectingpeoplewithgreatjobs.com"
     udp: true
   - name: "152.69.226.63:25555"
     type: vless
@@ -225,12 +249,21 @@ proxies:
     ws-opts:
       path: "/"
     udp: true
-  - name: "15.235.184.127:443"
+  - name: "216.152.147.93:443"
     type: trojan
-    server: "15.235.184.127"
+    server: "216.152.147.93"
     port: 443
     password: "0ab6c98dae3b48e8b9c4a776b6c9c19a"
-    sni: "exploredigitaljobplatformandfindonlinework.com"
+    sni: "connectingpeoplewithgreatjobs.com"
+    udp: true
+  - name: "95.174.68.188:14430"
+    type: vless
+    server: "95.174.68.188"
+    port: 14430
+    uuid: "965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0"
+    network: ws
+    ws-opts:
+      path: "/vless"
     udp: true
 
 proxy-groups:
@@ -238,33 +271,34 @@ proxy-groups:
     type: select
     proxies:
       - AUTO
-      - "🇺🇸US_14|2.0MB/s"
-      - "日本_112415166"
-      - "🇳🇿 新西兰 V2CROSS.COM"
+      - "🇭🇰 香港 阿里云"
       - "🇮🇹 意大利2|@ripaojiedian"
+      - "66.163.127.225:443"
+      - "🇳🇿 新西兰 V2CROSS.COM"
       - "54.36.102.152:2083"
       - "5.178.109.174:14430"
-      - "178.172.227.124:10443"
-      - "ov-france1.09vpn.com:80"
-      - "防失效github+SubCrawler保加利亚_112415036"
-      - "45.63.30.142:443"
-      - "美国_1124154599"
+      - "ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ = @ꜰxxɴᴇᴛ🤡"
       - "'🇬🇧 英国 | GBR #1'"
-      - "136.148.83.71:443"
-      - "🇳🇱 荷兰 V2CROSS.COM"
-      - "🇻🇳 越南|@ripaojiedian"
-      - "🇭🇰 香港 阿里云"
-      - "🇭🇰 香港 阿里云-1"
-      - "152.53.120.90:50955"
-      - "66.163.127.225:443"
-      - "77.93.89.2:443"
-      - "216.152.147.79:443"
-      - "216.152.147.93:443"
-      - "57.129.132.223:80"
+      - "'🇬🇧 英国 | GBR #3'"
       - "208.69.78.33:443"
-      - "95.174.68.188:14430"
+      - "152.53.120.90:50955"
+      - "178.172.227.124:10443"
+      - "57.129.132.223:80"
+      - "ov-france1.09vpn.com:80"
+      - "🇻🇳 越南|@ripaojiedian"
+      - "win2loxfde0303.gggrelay.org:34745"
+      - "'🇩🇪 德国 | DEU #8'"
+      - "'🇩🇪 德国 | DEU #14'"
+      - "'🇩🇪 德国 | DEU #22'"
+      - "'🇩🇪 德国 | DEU #5'"
+      - "'🇩🇪 德国 | DEU #9'"
+      - "'🇩🇪 德国 | DEU #21'"
+      - "'🇩🇪 德国 | DEU #16'"
+      - "'🇩🇪 德国 | DEU #11'"
+      - "216.152.147.79:443"
       - "152.69.226.63:25555"
-      - "15.235.184.127:443"
+      - "216.152.147.93:443"
+      - "95.174.68.188:14430"
       - DIRECT
 
   - name: AUTO
@@ -274,33 +308,34 @@ proxy-groups:
     tolerance: 50
     lazy: false
     proxies:
-      - "🇺🇸US_14|2.0MB/s"
-      - "日本_112415166"
-      - "🇳🇿 新西兰 V2CROSS.COM"
+      - "🇭🇰 香港 阿里云"
       - "🇮🇹 意大利2|@ripaojiedian"
+      - "66.163.127.225:443"
+      - "🇳🇿 新西兰 V2CROSS.COM"
       - "54.36.102.152:2083"
       - "5.178.109.174:14430"
-      - "178.172.227.124:10443"
-      - "ov-france1.09vpn.com:80"
-      - "防失效github+SubCrawler保加利亚_112415036"
-      - "45.63.30.142:443"
-      - "美国_1124154599"
+      - "ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ = @ꜰxxɴᴇᴛ🤡"
       - "'🇬🇧 英国 | GBR #1'"
-      - "136.148.83.71:443"
-      - "🇳🇱 荷兰 V2CROSS.COM"
-      - "🇻🇳 越南|@ripaojiedian"
-      - "🇭🇰 香港 阿里云"
-      - "🇭🇰 香港 阿里云-1"
-      - "152.53.120.90:50955"
-      - "66.163.127.225:443"
-      - "77.93.89.2:443"
-      - "216.152.147.79:443"
-      - "216.152.147.93:443"
-      - "57.129.132.223:80"
+      - "'🇬🇧 英国 | GBR #3'"
       - "208.69.78.33:443"
-      - "95.174.68.188:14430"
+      - "152.53.120.90:50955"
+      - "178.172.227.124:10443"
+      - "57.129.132.223:80"
+      - "ov-france1.09vpn.com:80"
+      - "🇻🇳 越南|@ripaojiedian"
+      - "win2loxfde0303.gggrelay.org:34745"
+      - "'🇩🇪 德国 | DEU #8'"
+      - "'🇩🇪 德国 | DEU #14'"
+      - "'🇩🇪 德国 | DEU #22'"
+      - "'🇩🇪 德国 | DEU #5'"
+      - "'🇩🇪 德国 | DEU #9'"
+      - "'🇩🇪 德国 | DEU #21'"
+      - "'🇩🇪 德国 | DEU #16'"
+      - "'🇩🇪 德国 | DEU #11'"
+      - "216.152.147.79:443"
       - "152.69.226.63:25555"
-      - "15.235.184.127:443"
+      - "216.152.147.93:443"
+      - "95.174.68.188:14430"
 
 rules:
   - GEOIP,CN,DIRECT
