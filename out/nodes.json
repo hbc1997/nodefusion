@@ -1,136 +1,272 @@
 {
- "generated_at": "2026-11-28T07:48:36Z",
+ "generated_at": "2026-11-28T20:03:46Z",
  "meta": {
-  "total_parsed": 345,
-  "alive": 15,
-  "alive_rate": 4.3,
-  "probe_ms": 2511,
+  "total_parsed": 222,
+  "alive": 32,
+  "alive_rate": 14.4,
+  "probe_ms": 2519,
   "min_speed_mbps": 0.1,
-  "speed_tested": 15,
-  "elapsed_ms": 203726,
+  "speed_tested": 32,
+  "elapsed_ms": 232988,
   "tls": {}
  },
- "count": 15,
+ "count": 32,
  "nodes": [
+  {
+   "scheme": "hysteria2",
+   "host": "23.94.78.254",
+   "port": 443,
+   "name": "美国_112821114",
+   "latency_ms": 20.3,
+   "speed_mbps": 10.244
+  },
   {
    "scheme": "hysteria2",
    "host": "206.189.229.48",
    "port": 443,
-   "name": "美国_1128034152",
-   "latency_ms": 35.1,
-   "speed_mbps": 10.738
-  },
-  {
-   "scheme": "ss",
-   "host": "202.50.253.36",
-   "port": 19999,
-   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 131.5,
-   "speed_mbps": 4.237
-  },
-  {
-   "scheme": "ss",
-   "host": "8.216.18.170",
-   "port": 5555,
-   "name": "🇯🇵 JP日本(mibei77.com 米贝节点分享)",
-   "latency_ms": 136.1,
-   "speed_mbps": 4.138
-  },
-  {
-   "scheme": "ss",
-   "host": "8.216.8.0",
-   "port": 5555,
-   "name": "🇯🇵 JP日本(mibei77.com 米贝节点分享)",
-   "latency_ms": 135.6,
-   "speed_mbps": 4.126
-  },
-  {
-   "scheme": "ss",
-   "host": "202.50.253.99",
-   "port": 19999,
-   "name": "🇳🇿 新西兰 V2CROSS.COM",
-   "latency_ms": 137.2,
-   "speed_mbps": 3.989
-  },
-  {
-   "scheme": "ss",
-   "host": "202.50.253.72",
-   "port": 19999,
-   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 130.6,
-   "speed_mbps": 3.858
-  },
-  {
-   "scheme": "ss",
-   "host": "202.50.253.63",
-   "port": 19999,
-   "name": "🇳🇿 新西兰 V2CROSS.COM",
-   "latency_ms": 139.4,
-   "speed_mbps": 3.846
-  },
-  {
-   "scheme": "ss",
-   "host": "202.50.253.90",
-   "port": 19999,
-   "name": "🇮🇹 意大利(mibei77.com 米贝节点分享)",
-   "latency_ms": 124.0,
-   "speed_mbps": 3.778
-  },
-  {
-   "scheme": "vless",
-   "host": "5.178.109.174",
-   "port": 14430,
-   "name": "",
-   "latency_ms": 133.0,
-   "speed_mbps": 2.236
-  },
-  {
-   "scheme": "vless",
-   "host": "163.172.213.174",
-   "port": 80,
-   "name": "",
-   "latency_ms": 119.4,
-   "speed_mbps": 1.409
-  },
-  {
-   "scheme": "ss",
-   "host": "8.209.236.164",
-   "port": 5555,
-   "name": "🇯🇵 JP日本(mibei77.com 米贝节点分享)",
-   "latency_ms": 135.9,
-   "speed_mbps": 1.199
-  },
-  {
-   "scheme": "ss",
-   "host": "202.50.253.18",
-   "port": 19999,
-   "name": "🇮🇹 意大利2|@ripaojiedian",
-   "latency_ms": 137.0,
-   "speed_mbps": 0.636
+   "name": "美国_1128214173",
+   "latency_ms": 56.7,
+   "speed_mbps": 6.006
   },
   {
    "scheme": "ss",
    "host": "202.50.253.45",
    "port": 19999,
    "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
-   "latency_ms": 140.1,
-   "speed_mbps": 0.636
+   "latency_ms": 148.5,
+   "speed_mbps": 3.679
+  },
+  {
+   "scheme": "ss",
+   "host": "202.50.253.54",
+   "port": 19999,
+   "name": "🇮🇹 意大利(mibei77.com 米贝节点分享)",
+   "latency_ms": 148.5,
+   "speed_mbps": 3.62
+  },
+  {
+   "scheme": "ss",
+   "host": "202.50.253.99",
+   "port": 19999,
+   "name": "🇮🇹 意大利(mibei77.com 米贝节点分享)",
+   "latency_ms": 148.3,
+   "speed_mbps": 3.466
+  },
+  {
+   "scheme": "vless",
+   "host": "krd.80782636.xyz",
+   "port": 443,
+   "name": "🇰🇷[www.v2nodes.com] vless-KR-1...",
+   "latency_ms": 313.4,
+   "speed_mbps": 3.362
+  },
+  {
+   "scheme": "vless",
+   "host": "82.152.18.32",
+   "port": 443,
+   "name": "",
+   "latency_ms": 133.5,
+   "speed_mbps": 3.206
+  },
+  {
+   "scheme": "ss",
+   "host": "202.50.253.63",
+   "port": 19999,
+   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
+   "latency_ms": 150.2,
+   "speed_mbps": 3.1
+  },
+  {
+   "scheme": "ss",
+   "host": "202.50.253.72",
+   "port": 19999,
+   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
+   "latency_ms": 148.5,
+   "speed_mbps": 2.987
   },
   {
    "scheme": "hysteria2",
    "host": "135.126.21.107",
    "port": 443,
+   "name": "美国_112821089",
+   "latency_ms": 137.4,
+   "speed_mbps": 2.321
+  },
+  {
+   "scheme": "vless",
+   "host": "5.178.109.174",
+   "port": 14430,
    "name": "",
-   "latency_ms": 128.0,
-   "speed_mbps": 0.498
+   "latency_ms": 149.0,
+   "speed_mbps": 2.021
+  },
+  {
+   "scheme": "vless",
+   "host": "bookend.filnex.baby",
+   "port": 443,
+   "name": "'🇩🇪 德国 | DEU #3'",
+   "latency_ms": 552.6,
+   "speed_mbps": 1.875
+  },
+  {
+   "scheme": "ss",
+   "host": "202.50.253.27",
+   "port": 19999,
+   "name": "🇮🇹 意大利(mibei77.com 米贝节点分享)",
+   "latency_ms": 148.6,
+   "speed_mbps": 1.862
+  },
+  {
+   "scheme": "vless",
+   "host": "sienna.merlano.monster",
+   "port": 443,
+   "name": "'🇩🇪 德国 | DEU #16'",
+   "latency_ms": 639.7,
+   "speed_mbps": 1.55
+  },
+  {
+   "scheme": "vless",
+   "host": "13.140.56.100",
+   "port": 14430,
+   "name": "",
+   "latency_ms": 237.7,
+   "speed_mbps": 1.479
+  },
+  {
+   "scheme": "ss",
+   "host": "202.50.253.81",
+   "port": 19999,
+   "name": "🇮🇹 意大利(mibei77.com 米贝节点分享)",
+   "latency_ms": 148.4,
+   "speed_mbps": 1.441
+  },
+  {
+   "scheme": "vless",
+   "host": "ov-france1.09vpn.com",
+   "port": 80,
+   "name": "",
+   "latency_ms": 334.2,
+   "speed_mbps": 1.239
   },
   {
    "scheme": "vless",
    "host": "138.124.70.41",
    "port": 14430,
    "name": "",
-   "latency_ms": 117.3,
+   "latency_ms": 124.2,
+   "speed_mbps": 1.224
+  },
+  {
+   "scheme": "vmess",
+   "host": "Ir.wbzo.ir",
+   "port": 2080,
+   "name": "🇩🇪 德国 | DEU 9",
+   "latency_ms": 1024.5,
+   "speed_mbps": 1.08
+  },
+  {
+   "scheme": "ss",
+   "host": "202.50.253.90",
+   "port": 19999,
+   "name": "🇮🇹 意大利(mibei77.com 米贝节点分享)",
+   "latency_ms": 148.6,
+   "speed_mbps": 1.055
+  },
+  {
+   "scheme": "vless",
+   "host": "woodgrain.filnex.baby",
+   "port": 443,
+   "name": "'🇩🇪 德国 | DEU #10'",
+   "latency_ms": 588.9,
+   "speed_mbps": 0.971
+  },
+  {
+   "scheme": "hysteria2",
+   "host": "hysteria.udpgw.com",
+   "port": 8443,
+   "name": "",
+   "latency_ms": 810.1,
+   "speed_mbps": 0.968
+  },
+  {
+   "scheme": "vless",
+   "host": "163.172.213.174",
+   "port": 80,
+   "name": "",
+   "latency_ms": 129.2,
+   "speed_mbps": 0.847
+  },
+  {
+   "scheme": "hysteria2",
+   "host": "136.148.83.69",
+   "port": 443,
+   "name": "英国_112821012",
+   "latency_ms": 185.9,
+   "speed_mbps": 0.829
+  },
+  {
+   "scheme": "vless",
+   "host": "xinnusvpn.duckdns.org",
+   "port": 8443,
+   "name": "'🇳🇱 荷兰 | NLD #5'",
+   "latency_ms": 878.0,
+   "speed_mbps": 0.666
+  },
+  {
+   "scheme": "trojan",
+   "host": "sclass-01.catcat321.com",
+   "port": 20103,
+   "name": "🇭🇰 HK香港(mibei77.com 米贝节点分享)",
+   "latency_ms": 219.8,
+   "speed_mbps": 0.665
+  },
+  {
+   "scheme": "ss",
+   "host": "202.50.253.36",
+   "port": 19999,
+   "name": "🇺🇸 US美国(mibei77.com 米贝节点分享)",
+   "latency_ms": 148.5,
+   "speed_mbps": 0.635
+  },
+  {
+   "scheme": "ss",
+   "host": "202.50.253.18",
+   "port": 19999,
+   "name": "🇳🇿 新西兰 V2CROSS.COM",
+   "latency_ms": 148.9,
+   "speed_mbps": 0.635
+  },
+  {
+   "scheme": "vless",
+   "host": "136.148.83.70",
+   "port": 443,
+   "name": "'🇬🇧 英国 | GBR #2'",
+   "latency_ms": 189.9,
+   "speed_mbps": 0.481
+  },
+  {
+   "scheme": "vless",
+   "host": "150.95.109.109",
+   "port": 2086,
+   "name": "",
+   "latency_ms": 186.9,
    "speed_mbps": 0.318
+  },
+  {
+   "scheme": "ss",
+   "host": "47.254.128.109",
+   "port": 443,
+   "name": "🇩🇪 DE德国(mibei77.com 米贝节点分享)",
+   "latency_ms": 187.4,
+   "speed_mbps": 0.274
+  },
+  {
+   "scheme": "vless",
+   "host": "ws.dhafhdtjdti.site",
+   "port": 2053,
+   "name": "🇸🇪[www.v2nodes.com] vless-SE-1...",
+   "latency_ms": 231.3,
+   "speed_mbps": 0.248
   }
  ]
 }

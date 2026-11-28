@@ -1,5 +1,5 @@
-# nodefusion  generated 2026-11-28 07:48:36 UTC
-# alive: 15   speed-tested: 15
+# nodefusion  generated 2026-11-28 20:03:46 UTC
+# alive: 32   speed-tested: 32
 mixed-port: 7890
 allow-lan: false
 mode: rule
@@ -17,7 +17,15 @@ dns:
     - 119.29.29.29
 
 proxies:
-  - name: "美国_1128034152"
+  - name: "美国_112821114"
+    type: hysteria2
+    server: "23.94.78.254"
+    port: 443
+    password: "8JyKbwVKjhMSF8b1WjuIpImoXKUCfn6"
+    sni: "dl2.yuanshicheng.com"
+    skip-cert-verify: true
+    udp: true
+  - name: "美国_1128214173"
     type: hysteria2
     server: "206.189.229.48"
     port: 443
@@ -29,52 +37,66 @@ proxies:
     udp: true
   - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)"
     type: ss
-    server: "202.50.253.36"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇯🇵 JP日本(mibei77.com 米贝节点分享)"
-    type: ss
-    server: "8.216.18.170"
-    port: 5555
-    cipher: "aes-256-gcm"
-    password: "123456"
-    udp: true
-  - name: "🇯🇵 JP日本(mibei77.com 米贝节点分享)-1"
-    type: ss
-    server: "8.216.8.0"
-    port: 5555
-    cipher: "aes-256-gcm"
-    password: "123456"
-    udp: true
-  - name: "🇳🇿 新西兰 V2CROSS.COM"
-    type: ss
-    server: "202.50.253.99"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
-    type: ss
-    server: "202.50.253.72"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇳🇿 新西兰 V2CROSS.COM-1"
-    type: ss
-    server: "202.50.253.63"
+    server: "202.50.253.45"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     udp: true
   - name: "🇮🇹 意大利(mibei77.com 米贝节点分享)"
     type: ss
-    server: "202.50.253.90"
+    server: "202.50.253.54"
     port: 19999
     cipher: "aes-256-gcm"
     password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇮🇹 意大利(mibei77.com 米贝节点分享)-1"
+    type: ss
+    server: "202.50.253.99"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇰🇷[www.v2nodes.com] vless-KR-1..."
+    type: vless
+    server: "krd.80782636.xyz"
+    port: 443
+    uuid: "db906786-8c49-4b17-9182-cea680ef954d"
+    network: ws
+    tls: true
+    servername: "krd.80782636.xyz"
+    ws-opts:
+      path: "/kw7x2mq9"
+    udp: true
+  - name: "82.152.18.32:443"
+    type: vless
+    server: "82.152.18.32"
+    port: 443
+    uuid: "a61ce788-6cfe-4bbe-9f81-155ea8fa8e16"
+    network: tcp
+    tls: true
+    servername: "diyichongdi.us.ci"
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
+    type: ss
+    server: "202.50.253.63"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-2"
+    type: ss
+    server: "202.50.253.72"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "美国_112821089"
+    type: hysteria2
+    server: "135.126.21.107"
+    port: 443
+    password: "6ac6d17d-040c-4fab-940e-8f5d72c3fed6"
+    sni: "de2-balance.rezproffx.ru"
+    skip-cert-verify: true
     udp: true
   - name: "5.178.109.174:14430"
     type: vless
@@ -85,42 +107,59 @@ proxies:
     ws-opts:
       path: "/vless"
     udp: true
-  - name: "163.172.213.174:80"
+  - name: "'🇩🇪 德国 | DEU #3'"
     type: vless
-    server: "163.172.213.174"
+    server: "bookend.filnex.baby"
+    port: 443
+    uuid: "749b1c56-e658-4bf5-94bd-5c3286a4aed1"
+    network: ws
+    tls: true
+    servername: "ferncrest.gerqix.online"
+    ws-opts:
+      path: "/api/de1/stream"
+    udp: true
+  - name: "🇮🇹 意大利(mibei77.com 米贝节点分享)-2"
+    type: ss
+    server: "202.50.253.27"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "'🇩🇪 德国 | DEU #16'"
+    type: vless
+    server: "sienna.merlano.monster"
+    port: 443
+    uuid: "749b1c56-e658-4bf5-94bd-5c3286a4aed1"
+    network: ws
+    tls: true
+    servername: "sienna.merlano.monster"
+    ws-opts:
+      path: "/api/de4/stream"
+    udp: true
+  - name: "13.140.56.100:14430"
+    type: vless
+    server: "13.140.56.100"
+    port: 14430
+    uuid: "68512eac-cd53-4de3-8d1e-08f6e04af1a9"
+    network: ws
+    ws-opts:
+      path: "/vless"
+    udp: true
+  - name: "🇮🇹 意大利(mibei77.com 米贝节点分享)-3"
+    type: ss
+    server: "202.50.253.81"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "ov-france1.09vpn.com:80"
+    type: vless
+    server: "ov-france1.09vpn.com"
     port: 80
-    uuid: "e73df646-1f62-41bf-8c50-653497d603d0"
+    uuid: "25f86cb1-2140-4085-abcb-c3a0ea7a4be0"
     network: ws
     ws-opts:
       path: "/vless/"
-    udp: true
-  - name: "🇯🇵 JP日本(mibei77.com 米贝节点分享)-2"
-    type: ss
-    server: "8.209.236.164"
-    port: 5555
-    cipher: "aes-256-gcm"
-    password: "123456"
-    udp: true
-  - name: "🇮🇹 意大利2|@ripaojiedian"
-    type: ss
-    server: "202.50.253.18"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-2"
-    type: ss
-    server: "202.50.253.45"
-    port: 19999
-    cipher: "aes-256-gcm"
-    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    udp: true
-  - name: "135.126.21.107:443"
-    type: hysteria2
-    server: "135.126.21.107"
-    port: 443
-    password: "6ac6d17d-040c-4fab-940e-8f5d72c3fed6"
-    sni: "de2-balance.rezproffx.ru"
     udp: true
   - name: "138.124.70.41:14430"
     type: vless
@@ -131,27 +170,165 @@ proxies:
     ws-opts:
       path: "/vless"
     udp: true
+  - name: "🇩🇪 德国 | DEU 9"
+    type: vmess
+    server: "Ir.wbzo.ir"
+    port: 2080
+    uuid: "b7e3e8af-d1ca-45da-a95f-8b9ad77398b1"
+    alterId: 0
+    cipher: "auto"
+    network: tcp
+    skip-cert-verify: true
+    udp: true
+  - name: "🇮🇹 意大利(mibei77.com 米贝节点分享)-4"
+    type: ss
+    server: "202.50.253.90"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "'🇩🇪 德国 | DEU #10'"
+    type: vless
+    server: "woodgrain.filnex.baby"
+    port: 443
+    uuid: "749b1c56-e658-4bf5-94bd-5c3286a4aed1"
+    network: ws
+    tls: true
+    servername: "larchbank.elvano.website"
+    ws-opts:
+      path: "/api/de2/stream"
+    udp: true
+  - name: "hysteria.udpgw.com:8443"
+    type: hysteria2
+    server: "hysteria.udpgw.com"
+    port: 8443
+    password: "HowdyHysteria2023w0W"
+    sni: "sni-here.com#"
+    obfs: "salamander"
+    obfs-password: "HysteriaHowdy"
+    skip-cert-verify: true
+    udp: true
+  - name: "163.172.213.174:80"
+    type: vless
+    server: "163.172.213.174"
+    port: 80
+    uuid: "e73df646-1f62-41bf-8c50-653497d603d0"
+    network: ws
+    ws-opts:
+      path: "/vless/"
+    udp: true
+  - name: "英国_112821012"
+    type: hysteria2
+    server: "136.148.83.69"
+    port: 443
+    password: "87bb2ac4-b7a1-0001-b11d-2107709ea6cb"
+    sni: "szqbx-ru-77dc.my-fade.cloud"
+    skip-cert-verify: true
+    udp: true
+  - name: "'🇳🇱 荷兰 | NLD #5'"
+    type: vless
+    server: "xinnusvpn.duckdns.org"
+    port: 8443
+    uuid: "c90395e6-2140-47ad-a54d-9b166729d3ef"
+    network: ws
+    tls: true
+    servername: "xinnusvpn.duckdns.org"
+    ws-opts:
+      path: "/wsnl"
+    udp: true
+  - name: "🇭🇰 HK香港(mibei77.com 米贝节点分享)"
+    type: trojan
+    server: "sclass-01.catcat321.com"
+    port: 20103
+    password: "2e7ebefd-1572-4a4e-b1ec-51a9cb4157b8"
+    sni: "hk.catxstar.com"
+    udp: true
+  - name: "🇺🇸 US美国(mibei77.com 米贝节点分享)-3"
+    type: ss
+    server: "202.50.253.36"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "🇳🇿 新西兰 V2CROSS.COM"
+    type: ss
+    server: "202.50.253.18"
+    port: 19999
+    cipher: "aes-256-gcm"
+    password: "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    udp: true
+  - name: "'🇬🇧 英国 | GBR #2'"
+    type: vless
+    server: "136.148.83.70"
+    port: 443
+    uuid: "00000000-0000-0001-0000-000000000000"
+    network: tcp
+    tls: true
+    servername: "aszbk-ru-78dc.my-fade.cloud"
+    udp: true
+  - name: "150.95.109.109:2086"
+    type: vless
+    server: "150.95.109.109"
+    port: 2086
+    uuid: "b83faafc-cbb7-4655-99d4-2c4c39a49d1b"
+    network: tcp
+    udp: true
+  - name: "🇩🇪 DE德国(mibei77.com 米贝节点分享)"
+    type: ss
+    server: "47.254.128.109"
+    port: 443
+    cipher: "2022-blake3-chacha20-poly1305"
+    password: "8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y="
+    udp: true
+  - name: "🇸🇪[www.v2nodes.com] vless-SE-1..."
+    type: vless
+    server: "ws.dhafhdtjdti.site"
+    port: 2053
+    uuid: "9f749472-c636-4c5a-af51-7f8feefaac81"
+    network: ws
+    tls: true
+    servername: "ws.dhafhdtjdti.site"
+    ws-opts:
+      path: "/"
+    udp: true
 
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
       - AUTO
-      - "美国_1128034152"
+      - "美国_112821114"
+      - "美国_1128214173"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)"
-      - "🇯🇵 JP日本(mibei77.com 米贝节点分享)"
-      - "🇯🇵 JP日本(mibei77.com 米贝节点分享)-1"
-      - "🇳🇿 新西兰 V2CROSS.COM"
-      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
-      - "🇳🇿 新西兰 V2CROSS.COM-1"
       - "🇮🇹 意大利(mibei77.com 米贝节点分享)"
-      - "5.178.109.174:14430"
-      - "163.172.213.174:80"
-      - "🇯🇵 JP日本(mibei77.com 米贝节点分享)-2"
-      - "🇮🇹 意大利2|@ripaojiedian"
+      - "🇮🇹 意大利(mibei77.com 米贝节点分享)-1"
+      - "🇰🇷[www.v2nodes.com] vless-KR-1..."
+      - "82.152.18.32:443"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)-2"
-      - "135.126.21.107:443"
+      - "美国_112821089"
+      - "5.178.109.174:14430"
+      - "'🇩🇪 德国 | DEU #3'"
+      - "🇮🇹 意大利(mibei77.com 米贝节点分享)-2"
+      - "'🇩🇪 德国 | DEU #16'"
+      - "13.140.56.100:14430"
+      - "🇮🇹 意大利(mibei77.com 米贝节点分享)-3"
+      - "ov-france1.09vpn.com:80"
       - "138.124.70.41:14430"
+      - "🇩🇪 德国 | DEU 9"
+      - "🇮🇹 意大利(mibei77.com 米贝节点分享)-4"
+      - "'🇩🇪 德国 | DEU #10'"
+      - "hysteria.udpgw.com:8443"
+      - "163.172.213.174:80"
+      - "英国_112821012"
+      - "'🇳🇱 荷兰 | NLD #5'"
+      - "🇭🇰 HK香港(mibei77.com 米贝节点分享)"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-3"
+      - "🇳🇿 新西兰 V2CROSS.COM"
+      - "'🇬🇧 英国 | GBR #2'"
+      - "150.95.109.109:2086"
+      - "🇩🇪 DE德国(mibei77.com 米贝节点分享)"
+      - "🇸🇪[www.v2nodes.com] vless-SE-1..."
       - DIRECT
 
   - name: AUTO
@@ -161,21 +338,38 @@ proxy-groups:
     tolerance: 50
     lazy: false
     proxies:
-      - "美国_1128034152"
+      - "美国_112821114"
+      - "美国_1128214173"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)"
-      - "🇯🇵 JP日本(mibei77.com 米贝节点分享)"
-      - "🇯🇵 JP日本(mibei77.com 米贝节点分享)-1"
-      - "🇳🇿 新西兰 V2CROSS.COM"
-      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
-      - "🇳🇿 新西兰 V2CROSS.COM-1"
       - "🇮🇹 意大利(mibei77.com 米贝节点分享)"
-      - "5.178.109.174:14430"
-      - "163.172.213.174:80"
-      - "🇯🇵 JP日本(mibei77.com 米贝节点分享)-2"
-      - "🇮🇹 意大利2|@ripaojiedian"
+      - "🇮🇹 意大利(mibei77.com 米贝节点分享)-1"
+      - "🇰🇷[www.v2nodes.com] vless-KR-1..."
+      - "82.152.18.32:443"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-1"
       - "🇺🇸 US美国(mibei77.com 米贝节点分享)-2"
-      - "135.126.21.107:443"
+      - "美国_112821089"
+      - "5.178.109.174:14430"
+      - "'🇩🇪 德国 | DEU #3'"
+      - "🇮🇹 意大利(mibei77.com 米贝节点分享)-2"
+      - "'🇩🇪 德国 | DEU #16'"
+      - "13.140.56.100:14430"
+      - "🇮🇹 意大利(mibei77.com 米贝节点分享)-3"
+      - "ov-france1.09vpn.com:80"
       - "138.124.70.41:14430"
+      - "🇩🇪 德国 | DEU 9"
+      - "🇮🇹 意大利(mibei77.com 米贝节点分享)-4"
+      - "'🇩🇪 德国 | DEU #10'"
+      - "hysteria.udpgw.com:8443"
+      - "163.172.213.174:80"
+      - "英国_112821012"
+      - "'🇳🇱 荷兰 | NLD #5'"
+      - "🇭🇰 HK香港(mibei77.com 米贝节点分享)"
+      - "🇺🇸 US美国(mibei77.com 米贝节点分享)-3"
+      - "🇳🇿 新西兰 V2CROSS.COM"
+      - "'🇬🇧 英国 | GBR #2'"
+      - "150.95.109.109:2086"
+      - "🇩🇪 DE德国(mibei77.com 米贝节点分享)"
+      - "🇸🇪[www.v2nodes.com] vless-SE-1..."
 
 rules:
   - GEOIP,CN,DIRECT
